@@ -11,7 +11,7 @@ graph TD
     B -->|Flagged| C[Commercial Licensing Restricted]
     B -->|Verified| D[Provenance Sealing Pipeline]
     D --> E[Neural Watermark & C2PA Injection]
-    E --> F[Forensic Invariance: Raw Purge]
+    E --> F[Provenance Invariance: Raw Purge]
     F --> G[Protected Media on Newsroom Wire]
 ```
 
@@ -24,14 +24,14 @@ Every upload is routed through an independent detection oracle network to evalua
 
 If content fails the synthetic-media check, it is automatically flagged and prevented from entering the commercial licensing pool. The creator receives an immediate in-app notice with the audit result.
 
-### 2. Forensic Provenance Sealing
+### 2. Provenance Sealing Pipeline
 Once verified, media passes into the provenance sealing pipeline:
 * **Neural Watermarking:** An invisible, imperceptible watermark is embedded across the luminance channels of the asset. The watermark encodes the unique scoop identifier and creator signature.
 * **Forward Error Correction:** The watermark incorporates forward error correction algorithms, ensuring the provenance signature survives social media compression, screen recording, and broadcast re-encoding.
 * **C2PA Manifest Injection:** A cryptographically signed Coalition for Content Provenance and Authenticity (C2PA) manifest is injected into the container, certifying camera parameters and capture timestamps.
 
-### 3. Forensic Invariance (Raw File Purge)
-To prevent unwatermarked source material from leaking or being scraped without authorization, the platform enforces **Forensic Invariance**:
+### 3. Provenance Invariance (Raw File Purge)
+To prevent unwatermarked source material from leaking or being scraped without authorization, the platform enforces **Provenance Invariance**:
 
 1. The sealing service verifies that the protected, watermarked asset exists and is intact.
 2. The protected asset replaces the raw asset on the distribution wire.
