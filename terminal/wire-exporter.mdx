@@ -1,0 +1,89 @@
+---
+title: "Wire Format Exporter"
+description: "How to export verified dispatches into IPTC NewsML-G2 XML and newsroom CMS webhooks."
+---
+
+The Wire Format Exporter transforms verified Extra Scoop dispatches into standardized newsroom formats, enabling rapid ingestion into broadcast automation, wire tickers, and digital content management systems.
+
+```mermaid
+graph TD
+    A[Licensed Dispatch] --> B[Wire Format Exporter]
+    B --> C[IPTC / NewsML-G2 XML]
+    B --> D[Standard JSON Webhook]
+    C --> E[Broadcast Systems (ENPS / AP / Reuters)]
+    D --> F[Newsroom CMS / Slack / Discord]
+```
+
+## Exporting a Dispatch
+
+<Steps>
+  <Step title="Open the Wire Exporter">
+    On any scoop card or detail view, click **Export Wire Dispatch**.
+  </Step>
+  <Step title="Select Output Format">
+    Choose between **IPTC / NewsML-G2 XML** or **JSON Webhook Payload**.
+  </Step>
+  <Step title="Copy or Dispatch">
+    * Click **Copy Code** to copy the formatted payload to your clipboard.
+    * Click **Push to CMS** to automatically dispatch the payload to your configured newsroom webhook endpoint.
+  </Step>
+</Steps>
+
+## Supported Formats
+
+### 1. IPTC NewsML-G2 Standard XML
+Compatible with leading broadcast and editorial wire systems including BBC ENPS, AP Newsroom, Reuters Connect, Avid, and Dalet:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<newsItem xmlns="http://iptc.org/std/nar/2006-10-01/" version="1.0" standard="NewsML-G2">
+  <itemMeta>
+    <itemClass qcode="ninat:picture"/>
+    <provider literal="Extra Scoop Provenance Engine"/>
+    <versionCreated>2026-08-30T22:00:00Z</versionCreated>
+    <pubStatus qcode="stat:usable"/>
+  </itemMeta>
+  <contentMeta>
+    <headline>Breaking Incident Verified in Central London</headline>
+    <dateline>Westminster, London</dateline>
+    <subject qcode="cat:crisis"/>
+    <signal qcode="c2pa:provenance_verified"/>
+    <meta name="license_status" content="UNLOCKED_PURCHASED"/>
+  </contentMeta>
+  <contentSet>
+    <remoteContent href="https://media.extrascoop.app/masters/scoop_123.mp4" contentType="video/mp4"/>
+  </contentSet>
+</newsItem>
+```
+
+### 2. Standard JSON Webhook Payload
+Structured JSON schema for custom newsroom API pipelines and real-time messaging alerts:
+
+```json
+{
+  "event": "SCOOP_WIRE_EXPORT",
+  "version": "2.0",
+  "license_status": "UNLOCKED_PURCHASED",
+  "scoop_id": "scp_8849204",
+  "headline": "Breaking Incident Verified in Central London",
+  "category": "Crisis",
+  "location": "Westminster, London",
+  "verification": {
+    "c2pa_verified": true,
+    "authenticity_status": "clear"
+  },
+  "media": {
+    "url": "https://media.extrascoop.app/masters/scoop_123.mp4",
+    "playback_id": "mux_stream_abc123"
+  }
+}
+```
+
+## Licensing State Enforcement
+
+To prevent accidental broadcast of unlicensed material, the exporter dynamically reflects the licensing state:
+
+| Status | Media URL in Payload | CMS Webhook Dispatch |
+| :--- | :--- | :--- |
+| **Purchased in Concord** | Full high-resolution broadcast master URL unlocked. | Enabled for direct automated publishing. |
+| **Unlicensed Preview** | Replaced with `[LOCKED - DEED PURCHASE REQUIRED]`. | Disabled until licence acquisition settles in Concord. |

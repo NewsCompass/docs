@@ -1,0 +1,59 @@
+{
+  "name": "Extra Scoop",
+  "navigation": [
+    {
+      "group": "Introduction",
+      "pages": [
+        "introduction/overview",
+        "introduction/glossary"
+      ]
+    },
+    {
+      "group": "Core Concepts",
+      "pages": [
+        "concepts/silicon-trust",
+        "concepts/digital-deeds",
+        "concepts/trust-scores",
+        "concepts/smart-escrow"
+      ]
+    },
+    {
+      "group": "Eyewitness Mobile App",
+      "pages": [
+        "eyewitness/quickstart",
+        "eyewitness/capturing-footage",
+        "eyewitness/dealroom-bidding",
+        "eyewitness/payouts-stripe",
+        "eyewitness/ephemeral-messenger"
+      ]
+    },
+    {
+      "group": "Newsroom Terminal",
+      "pages": [
+        "terminal/overview",
+        "terminal/workspace-columns",
+        "terminal/concord-dealroom",
+        "terminal/deed-vault",
+        "terminal/wire-exporter"
+      ]
+    },
+    {
+      "group": "Developer Hub",
+      "pages": [
+        "developer/api-authentication",
+        "developer/webhooks",
+        "developer/errors-and-limits"
+      ]
+    }
+  ],
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "colors": {
+    "primary": "#d81159",
+    "light": "#d81159",
+    "dark": "#d81159"
+  }
+}

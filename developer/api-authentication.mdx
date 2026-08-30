@@ -1,0 +1,80 @@
+---
+title: "API Authentication"
+description: "How to authenticate programmatic requests to the Extra Scoop Edge API."
+---
+
+The Extra Scoop Edge API allows media organisations to integrate wire feeds, automate bid management, and ingest licensed media into proprietary newsroom infrastructure.
+
+```mermaid
+sequenceDiagram
+    participant Client as Newsroom Client
+    participant API as Extra Scoop Edge API
+    Client->>API: HTTP Request + Bearer JWT
+    API->>API: Validate Token & Organization Scopes
+    API-->>Client: 200 OK + JSON Response
+```
+
+## Authentication Scheme
+
+All programmatic requests to the Extra Scoop API must be transmitted over HTTPS and include a valid JSON Web Token (JWT) in the standard `Authorization` header:
+
+```http
+Authorization: Bearer YOUR_API_OR_SESSION_JWT
+```
+
+### Obtaining an API Token
+
+1. Sign in to your verified newsroom account on the Newsroom Terminal.
+2. Navigate to **Terminal Settings > Developer**.
+3. Under **API Tokens**, click **Generate New Token**.
+4. Store your token securely; it is displayed only once upon creation.
+
+## Authenticated Request Example
+
+<CodeGroup>
+```bash cURL
+curl -X GET "https://api.extrascoop.app/v1/terminal/scoops?category=Crisis&min_trust=80" \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -H "Content-Type: application/json"
+```
+
+```typescript TypeScript
+import axios from 'axios';
+
+const response = await axios.get('https://api.extrascoop.app/v1/terminal/scoops', {
+  headers: {
+    Authorization: `Bearer ${process.env.EXTRA_SCOOP_API_TOKEN}`,
+    'Content-Type': 'application/json',
+  },
+  params: {
+    category: 'Crisis',
+    min_trust: 80,
+  },
+});
+
+console.log(response.data);
+```
+
+```python Python
+import requests
+import os
+
+headers = {
+    "Authorization": f"Bearer {os.environ['EXTRA_SCOOP_API_TOKEN']}",
+    "Content-Type": "application/json"
+}
+
+params = {
+    "category": "Crisis",
+    "min_trust": 80
+}
+
+response = requests.get("https://api.extrascoop.app/v1/terminal/scoops", headers=headers, params=params)
+print(response.json())
+```
+</CodeGroup>
+
+## Token Expiry and Rotation
+
+* **Session Tokens:** Granted through interactive sign-in; automatically refreshed via the client SDK.
+* **Service Tokens:** Static programmatic keys; can be revoked or rotated immediately from your Developer Dashboard if compromised.
