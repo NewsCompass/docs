@@ -354,15 +354,19 @@ During initial setup, you establish your security baseline:
 
 ## Step 4: Choose Your Reporting Persona
 
-During onboarding, the app configures your feed and alert prioritisation based on your reporting persona:
+During onboarding, you select an initial reporting role to bootstrap your personalized news feed and alert profile:
 
-| Reporting Role | Description | Primary Focus |
+| Reporting Role | In-App Description | Primary Focus |
 | :--- | :--- | :--- |
 | **Witness** | *"I'm there. I record. I report."* | Real-time breaking developments and live on-the-scene capture. |
 | **Field Reporter** | *"I provide pro-level, deep coverage."* | In-depth reporting, multi-angle documentation, and comprehensive coverage. |
 | **Truth Seeker** | *"I verify facts and maintain the score."* | Fact verification, integrity evaluation, and community credibility consensus. |
 
-You can update your persona and notification preferences at any time in **Settings > Preferences**.
+### Dynamic Recommendation Adaptation
+
+As you use Extra Scoop, the recommendation engine dynamically refines your discovery feed based on your active reporting behaviour—whether you focus on raw upload speed, deep multi-source investigation, or community verification.
+
+You can update your persona selection and notification preferences at any time in **Settings > Preferences**.
 
 Next, learn how to [Capture Verified Footage](/eyewitness/capturing-footage).
 
@@ -455,7 +459,17 @@ graph TD
 When an enterprise agency submits a bid:
 1. You receive a high-priority push notification and in-app alert.
 2. Open the notification to navigate directly to the **View Offer** dashboard for that specific scoop.
-3. The dashboard details the bidding organisation, offer amount in GBP (£), licence type, and expiration countdown.
+3. The dashboard details the bidding organisation, offer amount in GBP (£), licence type, and the live **expiration countdown timer** (configured by the newsroom between 3 minutes and 1 hour).
+
+## Commercial Bidding Bounds
+
+All commercial offers and counter-proposals operate within strict platform limits:
+
+| Parameter | Platform Bound | Description |
+| :--- | :--- | :--- |
+| **Minimum Offer** | **£5.00** | The baseline commercial offer for regional or non-exclusive dispatches. |
+| **Maximum Single Offer** | **£1,000,000.00** | The single-transaction limit for enterprise exclusive acquisitions. |
+| **Timer Windows** | **3m, 5m, 10m, 30m, 1h** | Standard response windows selected by the bidding newsroom. |
 
 ## Evaluating Licence Types
 
@@ -466,7 +480,7 @@ When an enterprise agency submits a bid:
 
 ## Responding to an Offer
 
-You have three options for every incoming offer:
+You have three options for every incoming offer before the countdown timer expires:
 
 ### 1. Accept the Offer
 * Tap **Accept Offer**.
@@ -477,7 +491,7 @@ You have three options for every incoming offer:
   * High-resolution broadcast media unlocks for the newsroom.
 
 ### 2. Submit a Counter-Offer
-* Tap **Counter Offer** and enter your proposed price (within platform limits between £5.00 and £1,000,000.00).
+* Tap **Counter Offer** and enter your proposed price (between £5.00 and £1,000,000.00).
 * The newsroom editor receives an instant update in their terminal desk with your proposed terms.
 
 ### 3. Decline the Offer
@@ -567,17 +581,17 @@ To defend against both contemporary surveillance and future quantum computing th
 | :--- | :--- | :--- |
 | **Post-Quantum Key Exchange** | ML-KEM 768 (Kyber) | Protects session keys against future quantum cryptanalysis ("harvest now, decrypt later"). |
 | **Asymmetric Key Exchange** | RSA-OAEP 2048 | Provides robust classical public-key cryptography. |
-| **Payload Encryption** | AES-GCM 256 | High-speed symmetric encryption for message content and media attachments. |
+| **Payload Encryption** | AES-GCM 256 | High-speed symmetric encryption for message content and media attachments up to a **64 KB** maximum envelope size. |
 | **Hardware-Backed Signatures** | ECDSA P-256 | Leverages the device's hardware Secure Enclave to mathematically guarantee message origin. |
 
 ## Ephemeral Privacy & RAM-Only Lifecycle
 
-The messaging architecture enforces strict confidentiality controls:
+The messaging architecture enforces strict operational confidentiality controls:
 
 * **Zero-Persistence Relay:** Messages are routed through isolated encrypted relays. The server retains no plaintext copies, decryption keys, or unencrypted metadata.
-* **RAM-Only Session Memory:** Active chat threads exist exclusively in volatile device memory and are never written to permanent disk storage.
-* **Deterministic Noise Wipe:** When a chat session reaches its operational timeout or when you sign out, the app overwrites cryptographic memory buffers with cryptographically secure random noise, rendering unauthorized memory extraction impossible.
-* **Safety Numbers & Fingerprints:** Both parties can visually compare a cryptographic safety number to verify that no intermediary has intercepted or modified the communication channel.
+* **15-Minute RAM-Only Session Lifetime:** Active chat threads exist exclusively in volatile device memory with a strict **15-minute lifetime**. Messages are never written to permanent disk storage or database records.
+* **Deterministic Noise Wipe:** Upon reaching the 15-minute session limit, or the moment you sign out, the application overwrites all cryptographic memory buffers with cryptographically secure random noise, rendering unauthorized memory extraction impossible.
+* **Safety Numbers & Fingerprints:** Both parties can visually compare a 32-character hexadecimal safety number to verify that no intermediary has intercepted or modified the communication channel.
 
 ## Initiating a Secure Session
 
@@ -719,7 +733,7 @@ The Concord Dealroom is the institutional transaction desk within the Newsroom T
 graph TD
     A[Discover Scoop on Wire] --> B[Inspect Verification Report]
     B --> C[Open Make Offer Modal]
-    C --> D[Specify Bid Amount & Licence Type]
+    C --> D[Specify Bid Amount, Expiry & Licence Type]
     D --> E[Lock Funds in Smart Escrow]
     E --> F[Creator Accepts in Dealroom]
     F --> G[Deed Anchored & High-Res Unlocked]
@@ -739,8 +753,9 @@ Before placing a commercial bid, click on any scoop card to open the **Verificat
   <Step title="Open Make Offer Modal">
     Click **Make Offer / Acquire Licence** on the scoop detail page.
   </Step>
-  <Step title="Set Offer Parameters">
+  <Step title="Set Commercial Terms & Timers">
     * **Bid Amount:** Enter your proposed price in GBP (£). Bids must fall within platform bounds (**£5.00** minimum up to **£1,000,000.00** maximum).
+    * **Offer Expiry Time:** Select an automated countdown window (**3 minutes**, **5 minutes**, **10 minutes**, **30 minutes**, or **1 hour**). If the creator does not respond within this window, the offer automatically expires and locked escrow funds return immediately to your balance.
     * **Licence Scope:** Select *Exclusive Commercial Licence* (sole rights) or *Syndication Licence* (shared editorial usage).
   </Step>
   <Step title="Lock Funds in Escrow">
@@ -754,7 +769,7 @@ The **Concord Dealroom** interface categorises all ongoing agency transactions:
 
 | Section | Description | Available Actions |
 | :--- | :--- | :--- |
-| **Active Bids (Under Offer)** | Offers submitted to creators awaiting decision. | Revoke offer (returns funds immediately) or adjust bid amount. |
+| **Active Bids (Under Offer)** | Offers submitted to creators with live countdown timers. | Revoke offer (returns funds immediately) or adjust bid amount. |
 | **Counter-Proposals** | Bids where the eyewitness has proposed a modified price. | Accept creator terms to settle immediately, or submit a revised counter-offer. |
 | **Purchased Licences** | Fully settled media assets. | Access high-resolution video streams, download C2PA manifests, or export to broadcast wire. |
 

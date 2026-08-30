@@ -9,7 +9,7 @@ The Concord Dealroom is the institutional transaction desk within the Newsroom T
 graph TD
     A[Discover Scoop on Wire] --> B[Inspect Verification Report]
     B --> C[Open Make Offer Modal]
-    C --> D[Specify Bid Amount & Licence Type]
+    C --> D[Specify Bid Amount, Expiry & Licence Type]
     D --> E[Lock Funds in Smart Escrow]
     E --> F[Creator Accepts in Dealroom]
     F --> G[Deed Anchored & High-Res Unlocked]
@@ -29,8 +29,9 @@ Before placing a commercial bid, click on any scoop card to open the **Verificat
   <Step title="Open Make Offer Modal">
     Click **Make Offer / Acquire Licence** on the scoop detail page.
   </Step>
-  <Step title="Set Offer Parameters">
+  <Step title="Set Commercial Terms & Timers">
     * **Bid Amount:** Enter your proposed price in GBP (£). Bids must fall within platform bounds (**£5.00** minimum up to **£1,000,000.00** maximum).
+    * **Offer Expiry Time:** Select an automated countdown window (**3 minutes**, **5 minutes**, **10 minutes**, **30 minutes**, or **1 hour**). If the creator does not respond within this window, the offer automatically expires and locked escrow funds return immediately to your balance.
     * **Licence Scope:** Select *Exclusive Commercial Licence* (sole rights) or *Syndication Licence* (shared editorial usage).
   </Step>
   <Step title="Lock Funds in Escrow">
@@ -44,7 +45,7 @@ The **Concord Dealroom** interface categorises all ongoing agency transactions:
 
 | Section | Description | Available Actions |
 | :--- | :--- | :--- |
-| **Active Bids (Under Offer)** | Offers submitted to creators awaiting decision. | Revoke offer (returns funds immediately) or adjust bid amount. |
+| **Active Bids (Under Offer)** | Offers submitted to creators with live countdown timers. | Revoke offer (returns funds immediately) or adjust bid amount. |
 | **Counter-Proposals** | Bids where the eyewitness has proposed a modified price. | Accept creator terms to settle immediately, or submit a revised counter-offer. |
 | **Purchased Licences** | Fully settled media assets. | Access high-resolution video streams, download C2PA manifests, or export to broadcast wire. |
 
