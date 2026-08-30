@@ -1,0 +1,1182 @@
+# Extra Scoop Full Documentation Compendium
+
+> Complete unabridged public documentation hosted at https://docs.extrascoop.app/
+
+
+# Category: Introduction
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/introduction/overview
+================================================================================
+
+---
+title: "Platform Overview"
+description: "An introduction to Extra Scoop, the institutional verification and media licensing network."
+---
+
+Extra Scoop is an institutional media network that bridges eyewitnesses on the ground with broadcast newsrooms. The platform combines hardware-backed capture, automated authenticity verification, and cryptographic licensing to establish an unbroken chain of custody for breaking news.
+
+You can use Extra Scoop across two primary interfaces:
+* **The Eyewitness Mobile App:** A mobile application for capturing verified footage, preserving camera provenance, negotiating commercial licences, and receiving instant payouts.
+* **The Newsroom Terminal:** A multi-stream desktop intelligence desk for wire editors and journalists to monitor incoming dispatches, inspect verification signals, acquire exclusive licences, and export packages to broadcast systems.
+
+```mermaid
+graph LR
+    A[Eyewitness Capture] --> B[Silicon Trust™ Verification]
+    B --> C[Newsroom Terminal]
+    C --> D[Smart Escrow Settlement]
+    D --> E[Digital Deed & Wire Export]
+```
+
+## How Extra Scoop Works
+
+The platform operates across four continuous stages:
+
+1. **Verified Capture:** You capture breaking media directly through the mobile application. The camera system records hardware provenance and cryptographic timestamps at the moment of recording.
+2. **Authenticity Inspection:** Every upload undergoes automated integrity analysis, including synthetic-media detection and metadata integrity checks, before reaching the newsroom wire.
+3. **Institutional Dealroom:** Newsrooms monitor verified intelligence streams, evaluate verification reports, and submit commercial bids directly to the creator.
+4. **Settlement and Delivery:** When you accept an offer, funds settle through escrow, an immutable Digital Deed is anchored to a public ledger, and broadcast-ready assets unlock for newsroom export.
+
+## Core Capabilities
+
+| Capability | Eyewitness Benefit | Newsroom Benefit |
+| :--- | :--- | :--- |
+| **Silicon Trust™** | Protects your original work against unauthorized copying with invisible provenance watermarking. | Guarantees media authenticity with independent deepfake and synthetic-media screening. |
+| **Digital Deeds** | Establishes legal copyright ownership and transparent commercial terms. | Provides clear indemnity and a verifiable chain of custody for editorial broadcast. |
+| **Smart Escrow** | Ensures guaranteed payment prior to the release of high-resolution source media. | Secures bidding funds in escrow until licensing terms are formally accepted. |
+| **Ephemeral Chat** | Protects source confidentiality with post-quantum end-to-end encryption. | Enables direct, secure price negotiation with eyewitnesses on the scene. |
+
+To get started, explore the [Platform Glossary](/introduction/glossary) or review the [Silicon Trust™ Architecture](/concepts/silicon-trust).
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/introduction/glossary
+================================================================================
+
+---
+title: "Platform Glossary"
+description: "Canonical terms and concepts used across the Extra Scoop documentation."
+---
+
+This glossary provides standard definitions for core architectural concepts, licensing terms, and verification systems across Extra Scoop.
+
+| Term | Definition |
+| :--- | :--- |
+| **Silicon Trust™** | A layered provenance framework that combines automated synthetic-media analysis, hardware-backed attestation, and cryptographically signed manifests to guarantee the integrity of breaking news media. |
+| **Digital Deed** | An immutable ownership certificate anchored to a public layer-2 ledger and decentralised storage, establishing legal title, chain of custody, and commercial licensing terms for captured media. |
+| **Trust Score** | A dynamic reputation rating computed from multi-factor verification signals, hardware attestation, and community consensus to measure creator credibility and media authenticity. |
+| **Smart Escrow** | An automated settlement mechanism that locks enterprise bids in secure custody and executes instant payout upon mutually accepted licensing terms. |
+| **Concord Dealroom** | An institutional negotiation interface enabling verified newsrooms to submit commercial bids, propose custom terms, and acquire exclusive media licences directly from eyewitnesses. |
+| **Deed Vault** | A cryptographically verifiable repository where creators and newsrooms inspect, track, and manage all active, pending, and settled digital deeds and licences. |
+| **Ephemeral Messenger** | An end-to-end encrypted communication channel engineered with post-quantum key encapsulation and deterministic memory purging to safeguard source confidentiality during licensing negotiations. |
+| **Newsroom Terminal** | A real-time intelligence desk featuring configurable multi-stream columns, acoustic radar alerts, and automated wire export for broadcast editorial teams. |
+| **Wire Exporter** | A formatting engine that converts verified media packages into IPTC NewsML-G2 XML and webhook payloads compatible with major broadcast CMS systems. |
+| **Provenance Invariance** | A security guarantee ensuring that unwatermarked raw source assets are permanently purged from public access once protected and sealed by the provenance pipeline. |
+| **Blind ID** | A cryptographically masked session identifier that shields contributor identity while maintaining verifiable reputational provenance. |
+| **C2PA Manifest** | A standardised digital provenance record injected directly into media containers to prove asset origin, capture parameters, and editorial integrity. |
+
+
+
+# Category: Core Concepts
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/concepts/silicon-trust
+================================================================================
+
+---
+title: "Silicon Trust™ Architecture"
+description: "How Extra Scoop verifies media authenticity and protects eyewitness provenance."
+---
+
+Silicon Trust™ is the core integrity architecture of Extra Scoop. It provides end-to-end verification for breaking news footage by combining hardware-backed capture, automated synthetic-media analysis, and persistent provenance watermarking.
+
+```mermaid
+graph TD
+    A[Raw Media Upload] --> B[Synthetic Media Oracle]
+    B -->|Flagged| C[Commercial Licensing Restricted]
+    B -->|Verified| D[Provenance Sealing Pipeline]
+    D --> E[Neural Watermark & C2PA Injection]
+    E --> F[Provenance Invariance: Raw Purge]
+    F --> G[Protected Media on Newsroom Wire]
+```
+
+## The Verification Pipeline
+
+When you submit media to the platform, Silicon Trust™ executes a multi-stage inspection process:
+
+### 1. Synthetic Media and Deepfake Detection
+Every upload is routed through an independent detection oracle network to evaluate authenticity. The oracle inspects the media for generative artefacts, deepfake manipulation, and synthetic voice synthesis. 
+
+If content fails the synthetic-media check, it is automatically flagged and prevented from entering the commercial licensing pool. The creator receives an immediate in-app notice with the audit result.
+
+### 2. Provenance Sealing Pipeline
+Once verified, media passes into the provenance sealing pipeline:
+* **Neural Watermarking:** An invisible, imperceptible watermark is embedded across the luminance channels of the asset. The watermark encodes the unique scoop identifier and creator signature.
+* **Forward Error Correction:** The watermark incorporates forward error correction algorithms, ensuring the provenance signature survives social media compression, screen recording, and broadcast re-encoding.
+* **C2PA Manifest Injection:** A cryptographically signed Coalition for Content Provenance and Authenticity (C2PA) manifest is injected into the container, certifying camera parameters and capture timestamps.
+
+### 3. Provenance Invariance (Raw File Purge)
+To prevent unwatermarked source material from leaking or being scraped without authorization, the platform enforces **Provenance Invariance**:
+
+1. The sealing service verifies that the protected, watermarked asset exists and is intact.
+2. The protected asset replaces the raw asset on the distribution wire.
+3. The platform permanently purges the unwatermarked source file from primary storage.
+
+Once purged, only the sealed version with embedded provenance is accessible for preview across the mobile app and newsroom terminal.
+
+## Provenance Guarantees
+
+| Property | Protection Mechanism | Operational Guarantee |
+| :--- | :--- | :--- |
+| **Authenticity** | Multi-factor oracle screening | Flags AI-generated or manipulated footage before licensing. |
+| **Tamper Resistance** | Error-corrected watermarking | Preserves attribution through video re-compression and cropping. |
+| **Chain of Custody** | C2PA signed metadata | Verifies hardware origin and capture timestamp for broadcast legal teams. |
+| **Source Safety** | Permanent raw purge | Eliminates unauthorized distribution of unprotected raw media. |
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/concepts/digital-deeds
+================================================================================
+
+---
+title: "Digital Deeds & Provenance"
+description: "How Digital Deeds establish legal ownership, licensing rights, and cryptographic custody."
+---
+
+A Digital Deed is an immutable certificate of ownership and commercial licensing issued for every verified scoop on Extra Scoop. It establishes an unbroken, cryptographically verifiable chain of custody between the eyewitness who recorded the event and the newsroom purchasing broadcast rights.
+
+```mermaid
+graph TD
+    A[Eyewitness Capture] --> B[Cryptographic Merkle Root]
+    B --> C[Decentralised Storage Manifest]
+    B --> D[Base Layer-2 Public Ledger]
+    C --> E[Deed Vault Inspection]
+    D --> E
+```
+
+## Structure of a Digital Deed
+
+Each Digital Deed consolidates critical provenance metadata into a standardised legal instrument:
+
+* **Provenance Anchor:** A SHA-256 cryptographic hash combining the unique scoop identifier, the C2PA root manifest, and the purchasing organisation identifier.
+* **Licence Terms:** Specifies whether rights are granted on an exclusive or syndication basis, alongside territorial and duration parameters.
+* **Chain of Custody:** Records the pseudonymous or verified creator identity, the purchasing newsroom bureau, and the transaction timestamp.
+* **Decentralised Manifest:** A complete metadata record pinned to decentralised storage (IPFS), guaranteeing that licensing terms cannot be retroactively altered.
+* **On-Chain Settlement Receipt:** A public layer-2 transaction hash anchored to Base, providing mathematical proof of settlement.
+
+## On-Chain Notarization
+
+When an offer is accepted in the dealroom, the settlement engine anchors the deed to the Base layer-2 network:
+
+```solidity
+event DeedAnchored(
+    bytes32 indexed merkleRoot,
+    string indexed scoopId,
+    address indexed journalist,
+    address agency,
+    uint256 pricePaid,
+    uint256 timestamp
+);
+```
+
+This on-chain record allows legal and compliance teams to independently verify media acquisition details on the public blockchain without relying on centralized intermediaries.
+
+## The Deed Vault
+
+Both eyewitnesses and newsrooms manage their deeds through the **Deed Vault**:
+* **Eyewitnesses:** View all issued deeds, monitor active commercial offers, verify royalty distributions, and download formal licensing certificates.
+* **Newsrooms:** Access purchased high-resolution source files, retrieve C2PA provenance manifests, and export verified editorial packages directly to broadcast CMS systems.
+
+For procedural guidance on buying and managing deeds, see the [Concord Dealroom Guide](/terminal/concord-dealroom).
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/concepts/trust-scores
+================================================================================
+
+---
+title: "Trust Scores & Verification"
+description: "How Extra Scoop measures media credibility, creator reputation, and feed priority."
+---
+
+The Trust Score is a dynamic credibility rating assigned to creators and individual media dispatches. It gives newsrooms an immediate measure of authenticity while ensuring high-integrity eyewitness reporting receives priority distribution on the wire.
+
+```mermaid
+graph TD
+    A[Hardware Device Attestation] --> E[Trust Score Engine]
+    B[Temporal & Location Consistency] --> E
+    C[Synthetic Media Screening] --> E
+    D[Historical Creator Accuracy] --> E
+    E --> F[Newsroom Feed Ranking]
+    E --> G[Visual Verification Badge]
+```
+
+## Verification Signals
+
+A Trust Score is computed across multiple independent integrity layers:
+
+| Signal Category | Evaluation Method | Protection Provided |
+| :--- | :--- | :--- |
+| **Hardware Attestation** | Cryptographic device handshake via secure enclaves. | Proves media was captured on genuine mobile hardware and not generated by an emulator or bot. |
+| **Temporal & Spatial Integrity** | Cross-verification of sensor timestamps, GPS coordinates, and regional events. | Ensures capture metadata aligns with the real-world timeline and reported incident location. |
+| **Synthetic Media Analysis** | Independent deepfake and generative artefact detection. | Filters out manipulated or AI-generated media before distribution. |
+| **Historical Track Record** | Verifiable history of previously licensed, authentic dispatches. | Rewards established eyewitnesses while maintaining rigorous checks for first-time uploaders. |
+
+> [!NOTE]
+> The exact weighting and mathematical models powering the Trust Score are proprietary to protect against adversarial manipulation and reverse engineering.
+
+## Feed Ranking and Discovery
+
+Newsroom feeds and consumer discovery tabs utilise the Trust Score to organise breaking news streams:
+
+* **Latest:** A real-time chronological stream of all newly incoming dispatches.
+* **Top Stories:** A weighted intelligence stream combining audience engagement velocity with creator credibility factors.
+* **Hot:** A dynamic velocity window highlighting rapidly developing local and global stories.
+* **Weighted Interleaving:** The discovery engine cycles across diverse news categories and creator networks in balanced rounds, ensuring local dispatches are not overshadowed by single viral stories.
+
+## Verification Badges in the Terminal
+
+Dispatches that clear all integrity checks display distinct verification indicators in the Newsroom Terminal:
+
+* **High Credibility:** Dispatches clearing full hardware attestation, synthetic-media analysis, and spatial consistency.
+* **Under Review:** Newly submitted content undergoing automated processing or awaiting secondary signals.
+* **Restricted / Flagged:** Content failing synthetic-media evaluation; automatically suppressed from commercial licensing.
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/concepts/smart-escrow
+================================================================================
+
+---
+title: "Smart Escrow & Settlement"
+description: "How automated escrow secures licensing transactions for both creators and newsrooms."
+---
+
+Extra Scoop incorporates an automated Smart Escrow system to manage financial settlement between newsrooms and eyewitnesses. Escrow ensures that newsrooms receive verified broadcast-grade media with full legal provenance, while ensuring creators receive guaranteed payment the moment licensing terms are accepted.
+
+```mermaid
+sequenceDiagram
+    participant Agency as Newsroom Agency
+    participant Escrow as Smart Escrow Engine
+    participant Creator as Eyewitness Creator
+    participant Ledger as Settlement Ledger
+
+    Agency->>Escrow: Submit Commercial Bid (Funds Locked)
+    Escrow->>Creator: Dispatch Offer Notification
+    Creator->>Escrow: Accept Offer Terms
+    Escrow->>Ledger: Atomic Settlement & Deed Anchor
+    Escrow->>Creator: Release Funds (Stripe Connect)
+    Escrow->>Agency: Unlock High-Res Broadcast Assets
+```
+
+## How Escrow Protects Both Parties
+
+### 1. For Newsrooms
+* **Guaranteed Media Delivery:** Bidding funds remain in escrow until the creator accepts the agreement and the platform delivers the certified high-resolution asset.
+* **Legal Certainty:** Every settled transaction issues an explicit commercial licence backed by a cryptographic Digital Deed.
+* **Automatic Refund:** If an offer expires, is declined by the creator, or is cancelled prior to acceptance, locked escrow funds return immediately to your balance.
+
+### 2. For Eyewitness Creators
+* **Guaranteed Payment:** You never release unwatermarked, high-resolution original media on credit. Payment is pre-funded and locked before you accept.
+* **Instant Payout:** Accepted funds clear directly into your connected banking account through Stripe Connect.
+* **Retained Rights:** If an offer is declined, you retain full ownership and can negotiate with competing news organisations.
+
+## Commercial Bidding Bounds
+
+To maintain institutional compliance and market integrity, all commercial bids within the dealroom adhere to platform bounds:
+
+| Parameter | Bound | Description |
+| :--- | :--- | :--- |
+| **Minimum Bid** | **£5.00** | The baseline commercial offer for non-exclusive or regional dispatches. |
+| **Maximum Single Bid** | **£1,000,000.00** | The single-transaction limit for enterprise exclusive media acquisitions. |
+| **Settlement Currency** | **GBP (£)** | Primary clearing currency with automated multi-currency conversion at payout. |
+
+## Settlement Lifecycle
+
+1. **Offer Submission:** The newsroom enters the bid amount in the Concord Dealroom. Funds are verified and held in escrow custody.
+2. **Review & Negotiation:** The creator receives a real-time push alert and can accept, counter-offer, or decline through the mobile app.
+3. **Atomic Execution:** Upon acceptance, the settlement engine executes simultaneously:
+   * Anchors the Digital Deed to the public layer-2 ledger.
+   * Unlocks the high-resolution media package and C2PA manifest for the newsroom.
+   * Dispatches creator proceeds to Stripe Connect.
+
+
+
+# Category: Eyewitness Mobile App
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/eyewitness/quickstart
+================================================================================
+
+---
+title: "Eyewitness App Quickstart"
+description: "How to set up the Extra Scoop mobile app and begin reporting verified news."
+---
+
+The Extra Scoop mobile app enables you to record breaking news footage, certify its provenance, license it to global news organisations, and get paid directly.
+
+```mermaid
+graph LR
+    A[Install App] --> B[Device Integrity Check]
+    B --> C[Configure Security PIN]
+    C --> D[Select Persona & Topics]
+    D --> E[Start Capturing]
+```
+
+## Step 1: Install and Launch
+
+1. Download Extra Scoop from the Apple App Store or Google Play Store.
+2. Launch the application and select **Get Started**.
+3. Complete the initial registration using your email address or biometric sign-in.
+
+## Step 2: Grant Permissions
+
+To certify that your footage is genuine and location-accurate, the app requires key device permissions:
+
+* **Camera & Microphone:** Required for in-app video recording and cryptographic timestamping.
+* **Location Services:** Required to embed verifiable geographic coordinates into your dispatch metadata.
+* **Push Notifications:** Required to receive instant alerts when newsrooms bid on your scoops.
+
+## Step 3: Configure Security & Identity
+
+During initial setup, you establish your security baseline:
+
+1. **Security PIN:** Set a 6-digit PIN used to authorize sensitive actions, such as bank account changes and cryptographic key rotations.
+2. **Biometric Unlock:** Enable Face ID, Touch ID, or fingerprint authentication for fast, secure access.
+3. **Source Privacy:** Choose whether your public profile displays your verified display name or a pseudonymous Blind ID for anonymous reporting.
+
+## Step 4: Choose Your Reporting Persona
+
+During onboarding, the app configures your feed and alert prioritisation based on your reporting persona:
+
+| Reporting Role | Description | Primary Focus |
+| :--- | :--- | :--- |
+| **Witness** | *"I'm there. I record. I report."* | Real-time breaking developments and live on-the-scene capture. |
+| **Field Reporter** | *"I provide pro-level, deep coverage."* | In-depth reporting, multi-angle documentation, and comprehensive coverage. |
+| **Truth Seeker** | *"I verify facts and maintain the score."* | Fact verification, integrity evaluation, and community credibility consensus. |
+
+You can update your persona and notification preferences at any time in **Settings > Preferences**.
+
+Next, learn how to [Capture Verified Footage](/eyewitness/capturing-footage).
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/eyewitness/capturing-footage
+================================================================================
+
+---
+title: "Capturing Verified Footage"
+description: "How to record, certify, and publish breaking media from the ground."
+---
+
+Extra Scoop uses an in-app capture system that establishes an unbroken chain of custody from the moment your camera sensor records light.
+
+```mermaid
+graph TD
+    A[Open In-App Camera] --> B[Hardware-Signed Recording]
+    B --> C[Sensor Metadata & Timestamp Extraction]
+    C --> D[Add Headline, Category & Tags]
+    D --> E[Upload & Automatic Provenance Sealing]
+```
+
+## How to Record a Scoop
+
+<Steps>
+  <Step title="Open the Capture Interface">
+    Tap the **Plus (+)** button in the bottom navigation bar to launch the in-app camera.
+  </Step>
+  <Step title="Record Footage or Take Photos">
+    * Tap the shutter button once for high-resolution still images.
+    * Press and hold (or tap video mode) to record continuous breaking video.
+    * The capture engine automatically seals device attestation tokens and GPS coordinates into the raw asset container.
+  </Step>
+  <Step title="Add Story Context">
+    * **Headline:** Enter a concise, factual description of the incident.
+    * **Category:** Select the primary topic (e.g., Crisis, Politics, Crime, Tech, Culture).
+    * **Location Tag:** Confirm the detected location or specify a local landmark.
+    * **Hashtags:** Add relevant tags to ensure discoverability by newsroom search filters.
+  </Step>
+  <Step title="Publish to the Wire">
+    Tap **Publish Scoop**. Your media immediately enters the Silicon Trust™ verification pipeline for automated synthetic-media analysis and provenance watermarking.
+  </Step>
+</Steps>
+
+## Offline Mode and Synchronisation
+
+If you are reporting from an area with weak or disrupted mobile connectivity, Extra Scoop operates in **Offline Mode**:
+
+1. Captured footage is encrypted and queued locally on your device.
+2. An offline banner indicates pending dispatches in your queue.
+3. Once network connectivity is restored, the application securely uploads the queue in the background without losing original capture timestamps or location data.
+
+## Privacy and Identity Controls
+
+When submitting content, you can control how your identity appears on the public wire:
+
+| Identity Mode | Visibility on Wire | Legal Title on Deed |
+| :--- | :--- | :--- |
+| **Verified Name** | Your full name and verified badge are public. | Registered directly in your name. |
+| **Pseudonymous / Blind ID** | A masked cryptographic session ID is displayed. | Maintained in secure escrow identity storage, protecting source confidentiality. |
+
+To understand how newsrooms bid on your published footage, proceed to [Dealroom & Bidding](/eyewitness/dealroom-bidding).
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/eyewitness/dealroom-bidding
+================================================================================
+
+---
+title: "The Dealroom & Bidding"
+description: "How to review incoming offers, negotiate terms, and license your scoops."
+---
+
+When a newsroom discovers your scoop on the wire, editors can place commercial bids to acquire broadcast rights. You manage and negotiate all incoming proposals within the **Dealroom**.
+
+```mermaid
+graph TD
+    A[Incoming Offer Push Alert] --> B[Open View Offer Screen]
+    B --> C{Evaluate Commercial Terms}
+    C -->|Accept| D[Smart Escrow Settlement & Instant Payout]
+    C -->|Counter-Offer| E[Submit New Price to Newsroom]
+    C -->|Decline| F[Retain Ownership for Competing Bids]
+```
+
+## Receiving an Offer
+
+When an enterprise agency submits a bid:
+1. You receive a high-priority push notification and in-app alert.
+2. Open the notification to navigate directly to the **View Offer** dashboard for that specific scoop.
+3. The dashboard details the bidding organisation, offer amount in GBP (£), licence type, and expiration countdown.
+
+## Evaluating Licence Types
+
+| Licence Type | Scope of Rights | Creator Implication |
+| :--- | :--- | :--- |
+| **Exclusive Commercial Licence** | The purchasing organisation gains sole broadcast and publishing rights. | You cannot license this specific asset to competing newsrooms. |
+| **Non-Exclusive Syndication** | The buyer receives non-exclusive editorial usage rights. | You retain the right to license the footage to additional outlets simultaneously. |
+
+## Responding to an Offer
+
+You have three options for every incoming offer:
+
+### 1. Accept the Offer
+* Tap **Accept Offer**.
+* The platform prompts for your biometric or PIN confirmation.
+* Smart Escrow instantly completes settlement:
+  * The locked funds transfer to your connected Stripe account.
+  * A Digital Deed is anchored on the Base layer-2 blockchain.
+  * High-resolution broadcast media unlocks for the newsroom.
+
+### 2. Submit a Counter-Offer
+* Tap **Counter Offer** and enter your proposed price (within platform limits between £5.00 and £1,000,000.00).
+* The newsroom editor receives an instant update in their terminal desk with your proposed terms.
+
+### 3. Decline the Offer
+* Tap **Decline**. The locked escrow funds return immediately to the newsroom, and your scoop remains available on the open marketplace for other buyers.
+
+Next, learn how to manage your banking details and withdraw earnings in [Payouts & Stripe Connect](/eyewitness/payouts-stripe).
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/eyewitness/payouts-stripe
+================================================================================
+
+---
+title: "Payouts & Stripe Connect"
+description: "How to connect your bank account, track earnings, and receive instant payouts."
+---
+
+Extra Scoop integrates with Stripe Connect to deliver secure, automated payouts directly to your local bank account whenever a licensing agreement is completed.
+
+```mermaid
+graph LR
+    A[Dealroom Acceptance] --> B[Escrow Clears Funds]
+    B --> C[Stripe Connect Settlement]
+    C --> D[Bank Transfer / Payout]
+```
+
+## Setting Up Your Payout Account
+
+<Steps>
+  <Step title="Navigate to Get Paid">
+    Tap your **Profile** tab in the mobile app and select **Get Paid & Earnings**.
+  </Step>
+  <Step title="Complete Stripe Onboarding">
+    Tap **Connect Bank Account**. You will be securely redirected to the Stripe Express onboarding portal to:
+    * Enter your legal name and contact details.
+    * Provide your bank account details (Sort Code and Account Number for UK accounts, or IBAN/Routing number for international accounts).
+    * Complete standard identity verification required by financial regulators.
+  </Step>
+  <Step title="Verification Confirmation">
+    Upon completing the form, you are returned to Extra Scoop. Your profile status updates to **Verified for Payouts**.
+  </Step>
+</Steps>
+
+## Tracking Balances and Payouts
+
+The **Get Paid** dashboard provides real-time financial tracking:
+
+* **Available Balance:** Funds from settled scoops ready for withdrawal or automatic transfer.
+* **Pending Escrow:** Value of active offers currently accepted and undergoing final settlement.
+* **Lifetime Earnings:** Historical cumulative total of all media sales and syndication royalties.
+* **Transaction History:** Detailed ledger breakdown of each sale, including scoop title, buyer organisation, licence type, and net payout.
+
+## Security and Payout Protection
+
+To protect your earnings against unauthorized withdrawals or account compromise:
+
+* **Biometric Authentication:** Changing bank details or initiating manual transfers requires Face ID / fingerprint verification or your 6-digit Security PIN.
+* **Automated Transfers:** Payouts clear automatically according to your regional banking schedule (typically within 1 to 2 business days, or instantly where supported).
+* **Account Disconnection:** You can disconnect or rotate your linked payout account at any time through the **Payout Settings** menu.
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/eyewitness/ephemeral-messenger
+================================================================================
+
+---
+title: "Ephemeral E2EE Messenger"
+description: "How Extra Scoop safeguards source confidentiality and encrypted communications."
+---
+
+The Ephemeral Messenger is a zero-knowledge, end-to-end encrypted (E2EE) chat environment designed for secure negotiations between eyewitnesses on the ground and newsroom editors.
+
+```mermaid
+graph LR
+    A[Eyewitness Device] -->|Hybrid Post-Quantum Envelope| B[Encrypted Relay]
+    B -->|Zero-Knowledge Ciphertext| C[Newsroom Terminal]
+    A -.->|Direct Safety Number Verification| C
+```
+
+## Cryptographic Security Layers
+
+To defend against both contemporary surveillance and future quantum computing threats, every message is encapsulated using a hybrid cryptographic framework:
+
+| Security Layer | Standard Utilised | Purpose |
+| :--- | :--- | :--- |
+| **Post-Quantum Key Exchange** | ML-KEM 768 (Kyber) | Protects session keys against future quantum cryptanalysis ("harvest now, decrypt later"). |
+| **Asymmetric Key Exchange** | RSA-OAEP 2048 | Provides robust classical public-key cryptography. |
+| **Payload Encryption** | AES-GCM 256 | High-speed symmetric encryption for message content and media attachments. |
+| **Hardware-Backed Signatures** | ECDSA P-256 | Leverages the device's hardware Secure Enclave to mathematically guarantee message origin. |
+
+## Ephemeral Privacy & RAM-Only Lifecycle
+
+The messaging architecture enforces strict confidentiality controls:
+
+* **Zero-Persistence Relay:** Messages are routed through isolated encrypted relays. The server retains no plaintext copies, decryption keys, or unencrypted metadata.
+* **RAM-Only Session Memory:** Active chat threads exist exclusively in volatile device memory and are never written to permanent disk storage.
+* **Deterministic Noise Wipe:** When a chat session reaches its operational timeout or when you sign out, the app overwrites cryptographic memory buffers with cryptographically secure random noise, rendering unauthorized memory extraction impossible.
+* **Safety Numbers & Fingerprints:** Both parties can visually compare a cryptographic safety number to verify that no intermediary has intercepted or modified the communication channel.
+
+## Initiating a Secure Session
+
+1. Open any scoop in the dealroom and tap **Message Newsroom** (or accept an incoming message request from an editor).
+2. The client automatically performs a key exchange and establishes the post-quantum encrypted channel.
+3. Verify the visual **Safety Number** displayed at the top of the chat window with your counterpart.
+4. Conduct price negotiation, clarify contextual details, or share additional perspective securely.
+
+
+
+# Category: Newsroom Terminal
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/terminal/overview
+================================================================================
+
+---
+title: "Newsroom Terminal Overview"
+description: "An institutional desktop command centre for newsrooms, wire editors, and investigative desks."
+---
+
+The Newsroom Terminal is a desktop intelligence platform engineered for broadcast newsrooms, wire services, and investigative desks. It provides real-time monitoring of verified breaking dispatches, instant commercial licensing, and direct broadcast export.
+
+```mermaid
+graph TD
+    A[Global Eyewitness Feed] --> B[Newsroom Terminal Desk]
+    B --> C[Multi-Stream Column Grid]
+    B --> D[OmniCommand & Boolean Search]
+    B --> E[Sonar Acoustic Radar]
+    B --> F[Concord Dealroom & Licensing]
+```
+
+## Core Terminal Capabilities
+
+* **Multi-Stream Intelligence Grid:** Create custom, draggable stream columns filtered by region, topic category, or verification status.
+* **OmniCommand Search:** Execute rapid natural language queries or advanced Boolean operators (`AND`, `OR`, `NOT`, `trust:>N`, `#hashtags`) to isolate breaking leads.
+* **Sonar Acoustic Radar:** Configurable Web Audio synthesised radar pings that alert editors the moment high-priority verified footage hits the wire.
+* **Concord Dealroom:** Institutional interface to place commercial bids, negotiate terms in real time, and execute smart escrow transactions.
+* **1-Click Broadcast Export:** Package verified stories into industry-standard IPTC NewsML-G2 XML or dispatch automated JSON webhooks into your newsroom CMS.
+
+## Navigation and Workspace Views
+
+You can switch between three primary views in the top navigation bar:
+
+| View Mode | Purpose | Primary Use Case |
+| :--- | :--- | :--- |
+| **Workspace Columns** | Multi-column real-time stream layout. | Continuous monitoring of multiple beats, regions, and breaking crisis events. |
+| **Grid Feed** | Single-window visual grid. | In-depth visual triage and media review of incoming dispatches. |
+| **Deed Vault** | Centralized legal repository. | Tracking purchased exclusive licences, on-chain deeds, and indemnity manifests. |
+
+## Access and Security
+
+Access to the Newsroom Terminal is restricted to verified media organisations, news agencies, and certified investigative bureaus. All terminal actions are cryptographically authenticated to maintain an audited record of media acquisitions.
+
+Next, learn how to configure your multi-column streams in [Workspace Columns](/terminal/workspace-columns).
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/terminal/workspace-columns
+================================================================================
+
+---
+title: "Workspace Columns & Search"
+description: "How to organise real-time monitoring columns and execute advanced Boolean queries."
+---
+
+The Newsroom Terminal workspace allows you to assemble tailored monitoring desks by configuring multi-column intelligence feeds and running lexical or natural language searches.
+
+```mermaid
+graph LR
+    A[Terminal Desk] --> B[Column 1: Breaking Crisis]
+    A --> C[Column 2: Politics Wire]
+    A --> D[Column 3: High-Trust Verified]
+    E[OmniCommand Bar] -->|Filters All Columns| A
+```
+
+## Managing Workspace Columns
+
+You can configure multiple independent columns side-by-side to monitor different beats simultaneously:
+
+<Steps>
+  <Step title="Add a New Column">
+    Click the **Add Column (+)** button in the workspace toolbar, or drag a filter preset directly onto the canvas.
+  </Step>
+  <Step title="Configure Column Filters">
+    Click the filter icon in the column header to set specific criteria:
+    * **Feed Scope:** Select *Latest* (chronological), *Top Stories* (rank-weighted), or *Hot* (velocity).
+    * **Category:** Focus on specific beats such as *Crisis*, *Politics*, *Tech*, *Crime*, or *World*.
+    * **Geographic Region:** Filter by city, borough, or country.
+  </Step>
+  <Step title="Reorder and Save Layout">
+    Drag columns horizontally to reorder your workspace. The terminal automatically persists your layout locally across sessions.
+  </Step>
+</Steps>
+
+## OmniCommand & Boolean Search
+
+The **OmniCommand Bar** located at the top of the terminal accepts both natural language queries and structured Boolean expressions.
+
+### Boolean Query Syntax
+
+You can refine your searches using standard operators:
+
+| Operator | Syntax Example | Behaviour |
+| :--- | :--- | :--- |
+| **AND** | `parliament AND protest` | Matches dispatches containing both terms. |
+| **OR** | `fire OR explosion` | Matches dispatches containing either term. |
+| **NOT** | `aviation NOT military` | Excludes dispatches containing the specified term. |
+| **Trust Threshold** | `trust:>85` | Filters for dispatches with a Trust Score exceeding the specified level. |
+| **Hashtags** | `#Westminster` | Restricts results to specific indexed hashtags. |
+
+### Natural Language Search
+
+You can also enter plain-language search instructions, such as *"Show verified footage of protests in central London from today"*. The terminal's newsroom compiler automatically extracts core keywords, matches relevant geographic bounds, and applies credibility filters.
+
+## Sonar Acoustic Radar
+
+To ensure editors never miss breaking developments while working across multiple screens, the terminal incorporates an acoustic radar:
+
+* **Radar Pings:** Generates a subtle, synthesised acoustic ping whenever a new high-priority dispatch matching your column criteria lands on the wire.
+* **Volume & Threshold Controls:** Configure audio alert sensitivity or mute specific beats in **Terminal Preferences > Audio**.
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/terminal/concord-dealroom
+================================================================================
+
+---
+title: "Concord Dealroom & Licensing"
+description: "How to negotiate, acquire, and manage exclusive commercial media licences."
+---
+
+The Concord Dealroom is the institutional transaction desk within the Newsroom Terminal. It enables newsrooms to inspect verification reports, make commercial offers, negotiate terms with creators, and secure exclusive broadcast rights.
+
+```mermaid
+graph TD
+    A[Discover Scoop on Wire] --> B[Inspect Verification Report]
+    B --> C[Open Make Offer Modal]
+    C --> D[Specify Bid Amount & Licence Type]
+    D --> E[Lock Funds in Smart Escrow]
+    E --> F[Creator Accepts in Dealroom]
+    F --> G[Deed Anchored & High-Res Unlocked]
+```
+
+## Reviewing Verification Intelligence
+
+Before placing a commercial bid, click on any scoop card to open the **Verification Dossier**:
+
+* **Authenticity Verdict:** Independent oracle detection confirming absence of deepfake or synthetic manipulation.
+* **C2PA Manifest Details:** Hardware device credentials, capture timestamps, and camera sensor parameters.
+* **Geographic Alignment:** Sensor GPS coordinates mapped against reported incident locations.
+
+## Placing an Offer
+
+<Steps>
+  <Step title="Open Make Offer Modal">
+    Click **Make Offer / Acquire Licence** on the scoop detail page.
+  </Step>
+  <Step title="Set Offer Parameters">
+    * **Bid Amount:** Enter your proposed price in GBP (£). Bids must fall within platform bounds (**£5.00** minimum up to **£1,000,000.00** maximum).
+    * **Licence Scope:** Select *Exclusive Commercial Licence* (sole rights) or *Syndication Licence* (shared editorial usage).
+  </Step>
+  <Step title="Lock Funds in Escrow">
+    Click **Confirm & Lock in Escrow**. The required funds are verified from your agency deposit and held in secure escrow.
+  </Step>
+</Steps>
+
+## Managing Active Negotiations
+
+The **Concord Dealroom** interface categorises all ongoing agency transactions:
+
+| Section | Description | Available Actions |
+| :--- | :--- | :--- |
+| **Active Bids (Under Offer)** | Offers submitted to creators awaiting decision. | Revoke offer (returns funds immediately) or adjust bid amount. |
+| **Counter-Proposals** | Bids where the eyewitness has proposed a modified price. | Accept creator terms to settle immediately, or submit a revised counter-offer. |
+| **Purchased Licences** | Fully settled media assets. | Access high-resolution video streams, download C2PA manifests, or export to broadcast wire. |
+
+## Settlement and Legal Protection
+
+The instant an eyewitness accepts your offer:
+1. Smart Escrow transfers funds to the creator.
+2. The transaction is notarized with an on-chain Digital Deed on Base layer-2.
+3. Your organisation receives immediate commercial indemnity and the asset is permanently moved to your [Deed Vault](/terminal/deed-vault).
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/terminal/deed-vault
+================================================================================
+
+---
+title: "The Deed Vault"
+description: "How to manage acquired digital deeds, verify on-chain anchors, and access licensed media."
+---
+
+The Deed Vault is your agency's permanent legal and compliance archive. It stores all acquired Digital Deeds, C2PA provenance receipts, and high-resolution master media packages in a single auditable interface.
+
+```mermaid
+graph LR
+    A[Deed Vault] --> B[Holographic Digital Deed]
+    A --> C[Base L2 Transaction Explorer]
+    A --> D[Decentralised IPFS Manifest]
+    A --> E[High-Res Master Download]
+```
+
+## Digital Deed Inspection
+
+Clicking on any purchased licence in the Deed Vault opens the **Interactive Digital Deed**:
+
+* **Licence Certificate:** Formal legal instrument detailing the granting organisation, licensee bureau, purchase price, and commercial rights granted.
+* **Provenance Anchor (Merkle Root):** The SHA-256 cryptographic hash uniquely binding the scoop content to the purchase agreement.
+* **Public Ledger Receipt:** A direct link to the transaction on the Base layer-2 blockchain confirming on-chain anchoring.
+* **IPFS Decentralised Record:** The permanent content identifier (CID) hosting the tamper-proof JSON manifest.
+
+## Accessing Master Media Files
+
+Once a deed settles, watermark restrictions on the master asset are lifted for your organisation:
+
+1. **High-Resolution Master Stream:** Stream or download uncompressed 4K / HD video and raw still photography.
+2. **C2PA Manifest Download:** Export the standalone C2PA cryptographic signature file for attachment to broadcast packages.
+3. **Legal Compliance Package:** Download a consolidated PDF receipt containing complete chain of custody and indemnity clauses for your legal department.
+
+## Auditing and Chain of Custody
+
+The Deed Vault allows editorial compliance teams to independently verify the authenticity of any historical purchase:
+
+```bash
+# Verify the cryptographic anchor independently
+echo -n "SCOOP_ID:C2PA_ROOT:AGENCY_ID" | sha256sum
+```
+
+Comparing this hash against the on-chain `DeedAnchored` event confirms that the media package remains identical to the certified original captured on the ground.
+
+To export your licensed assets into newsroom automation systems, see [Wire Format Exporter](/terminal/wire-exporter).
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/terminal/wire-exporter
+================================================================================
+
+---
+title: "Wire Format Exporter"
+description: "How to export verified dispatches into IPTC NewsML-G2 XML and newsroom CMS webhooks."
+---
+
+The Wire Format Exporter transforms verified Extra Scoop dispatches into standardized newsroom formats, enabling rapid ingestion into broadcast automation, wire tickers, and digital content management systems.
+
+```mermaid
+graph TD
+    A[Licensed Dispatch] --> B[Wire Format Exporter]
+    B --> C[IPTC / NewsML-G2 XML]
+    B --> D[Standard JSON Webhook]
+    C --> E[Broadcast Systems (ENPS / AP / Reuters)]
+    D --> F[Newsroom CMS / Slack / Discord]
+```
+
+## Exporting a Dispatch
+
+<Steps>
+  <Step title="Open the Wire Exporter">
+    On any scoop card or detail view, click **Export Wire Dispatch**.
+  </Step>
+  <Step title="Select Output Format">
+    Choose between **IPTC / NewsML-G2 XML** or **JSON Webhook Payload**.
+  </Step>
+  <Step title="Copy or Dispatch">
+    * Click **Copy Code** to copy the formatted payload to your clipboard.
+    * Click **Push to CMS** to automatically dispatch the payload to your configured newsroom webhook endpoint.
+  </Step>
+</Steps>
+
+## Supported Formats
+
+### 1. IPTC NewsML-G2 Standard XML
+Compatible with leading broadcast and editorial wire systems including BBC ENPS, AP Newsroom, Reuters Connect, Avid, and Dalet:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<newsItem xmlns="http://iptc.org/std/nar/2006-10-01/" version="1.0" standard="NewsML-G2">
+  <itemMeta>
+    <itemClass qcode="ninat:picture"/>
+    <provider literal="Extra Scoop Provenance Engine"/>
+    <versionCreated>2026-08-30T22:00:00Z</versionCreated>
+    <pubStatus qcode="stat:usable"/>
+  </itemMeta>
+  <contentMeta>
+    <headline>Breaking Incident Verified in Central London</headline>
+    <dateline>Westminster, London</dateline>
+    <subject qcode="cat:crisis"/>
+    <signal qcode="c2pa:provenance_verified"/>
+    <meta name="license_status" content="UNLOCKED_PURCHASED"/>
+  </contentMeta>
+  <contentSet>
+    <remoteContent href="https://media.extrascoop.app/masters/scoop_123.mp4" contentType="video/mp4"/>
+  </contentSet>
+</newsItem>
+```
+
+### 2. Standard JSON Webhook Payload
+Structured JSON schema for custom newsroom API pipelines and real-time messaging alerts:
+
+```json
+{
+  "event": "SCOOP_WIRE_EXPORT",
+  "version": "2.0",
+  "license_status": "UNLOCKED_PURCHASED",
+  "scoop_id": "scp_8849204",
+  "headline": "Breaking Incident Verified in Central London",
+  "category": "Crisis",
+  "location": "Westminster, London",
+  "verification": {
+    "c2pa_verified": true,
+    "authenticity_status": "clear"
+  },
+  "media": {
+    "url": "https://media.extrascoop.app/masters/scoop_123.mp4",
+    "playback_id": "mux_stream_abc123"
+  }
+}
+```
+
+## Licensing State Enforcement
+
+To prevent accidental broadcast of unlicensed material, the exporter dynamically reflects the licensing state:
+
+| Status | Media URL in Payload | CMS Webhook Dispatch |
+| :--- | :--- | :--- |
+| **Purchased in Concord** | Full high-resolution broadcast master URL unlocked. | Enabled for direct automated publishing. |
+| **Unlicensed Preview** | Replaced with `[LOCKED - DEED PURCHASE REQUIRED]`. | Disabled until licence acquisition settles in Concord. |
+
+
+
+# Category: Developer Hub
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/developer/api-authentication
+================================================================================
+
+---
+title: "API Authentication"
+description: "How to authenticate programmatic requests to the Extra Scoop Edge API."
+---
+
+The Extra Scoop Edge API allows media organisations to integrate wire feeds, automate bid management, and ingest licensed media into proprietary newsroom infrastructure.
+
+```mermaid
+sequenceDiagram
+    participant Client as Newsroom Client
+    participant API as Extra Scoop Edge API
+    Client->>API: HTTP Request + Bearer JWT
+    API->>API: Validate Token & Organization Scopes
+    API-->>Client: 200 OK + JSON Response
+```
+
+## Authentication Scheme
+
+All programmatic requests to the Extra Scoop API must be transmitted over HTTPS and include a valid JSON Web Token (JWT) in the standard `Authorization` header:
+
+```http
+Authorization: Bearer YOUR_API_OR_SESSION_JWT
+```
+
+### Obtaining an API Token
+
+1. Sign in to your verified newsroom account on the Newsroom Terminal.
+2. Navigate to **Terminal Settings > Developer**.
+3. Under **API Tokens**, click **Generate New Token**.
+4. Store your token securely; it is displayed only once upon creation.
+
+## Authenticated Request Example
+
+<CodeGroup>
+```bash cURL
+curl -X GET "https://api.extrascoop.app/v1/terminal/scoops?category=Crisis&min_trust=80" \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -H "Content-Type: application/json"
+```
+
+```typescript TypeScript
+import axios from 'axios';
+
+const response = await axios.get('https://api.extrascoop.app/v1/terminal/scoops', {
+  headers: {
+    Authorization: `Bearer ${process.env.EXTRA_SCOOP_API_TOKEN}`,
+    'Content-Type': 'application/json',
+  },
+  params: {
+    category: 'Crisis',
+    min_trust: 80,
+  },
+});
+
+console.log(response.data);
+```
+
+```python Python
+import requests
+import os
+
+headers = {
+    "Authorization": f"Bearer {os.environ['EXTRA_SCOOP_API_TOKEN']}",
+    "Content-Type": "application/json"
+}
+
+params = {
+    "category": "Crisis",
+    "min_trust": 80
+}
+
+response = requests.get("https://api.extrascoop.app/v1/terminal/scoops", headers=headers, params=params)
+print(response.json())
+```
+</CodeGroup>
+
+## Token Expiry and Rotation
+
+* **Session Tokens:** Granted through interactive sign-in; automatically refreshed via the client SDK.
+* **Service Tokens:** Static programmatic keys; can be revoked or rotated immediately from your Developer Dashboard if compromised.
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/developer/webhooks
+================================================================================
+
+---
+title: "Webhooks Integration"
+description: "How to subscribe to real-time licensing, verification, and settlement events."
+---
+
+Extra Scoop uses webhooks to notify external newsroom systems when asynchronous events occur on the platform, such as an eyewitness accepting an offer or a digital deed anchoring on-chain.
+
+```mermaid
+sequenceDiagram
+    participant Platform as Extra Scoop Platform
+    participant Receiver as Your Webhook Endpoint
+    Platform->>Receiver: POST /webhook (Event Payload + HMAC-SHA256 Signature)
+    Receiver->>Receiver: Verify X-Signature with Webhook Secret
+    Receiver-->>Platform: 200 OK Response
+```
+
+## Subscribing to Events
+
+You can configure webhook endpoints in the **Developer Settings** panel of the Newsroom Terminal.
+
+### Supported Event Types
+
+| Event Name | Trigger Condition |
+| :--- | :--- |
+| `escrow.locked` | Triggered when your commercial bid is successfully pre-funded and held in escrow. |
+| `offer.countered` | Triggered when an eyewitness proposes revised pricing for a pending bid. |
+| `deed.anchored` | Triggered when a creator accepts your offer and the Digital Deed is recorded on-chain. |
+| `media.ready` | Triggered when master broadcast files and C2PA manifests are ready for high-speed download. |
+| `scoop.verified` | Triggered when a new high-credibility dispatch matching your organisation's watch criteria clears verification. |
+
+## Securing Webhooks with HMAC-SHA256
+
+When Extra Scoop dispatches an event, it includes a cryptographic signature in the `X-Signature` HTTP header. You must verify this signature to ensure the payload originated from Extra Scoop and was not altered in transit.
+
+<Steps>
+  <Step title="Extract the Header">
+    Read the `X-Signature` header from the incoming request.
+  </Step>
+  <Step title="Compute the HMAC Hash">
+    Calculate an HMAC-SHA256 digest of the raw request payload using your configured webhook secret.
+  </Step>
+  <Step title="Constant-Time Comparison">
+    Compare the computed hash with the header value using a timing-safe string comparison.
+  </Step>
+</Steps>
+
+## Signature Verification Examples
+
+<CodeGroup>
+```typescript Node.js / TypeScript
+import crypto from 'crypto';
+import { Request, Response } from 'express';
+
+export function handleWebhook(req: Request, res: Response) {
+  const signature = req.headers['x-signature'] as string;
+  const secret = process.env.EXTRA_SCOOP_WEBHOOK_SECRET!;
+  
+  const expectedSignature = crypto
+    .createHmac('sha256', secret)
+    .update(JSON.stringify(req.body))
+    .digest('hex');
+
+  const isValid = crypto.timingSafeEqual(
+    Buffer.from(signature || '', 'hex'),
+    Buffer.from(expectedSignature, 'hex')
+  );
+
+  if (!isValid) {
+    return res.status(401).send('Invalid signature');
+  }
+
+  const event = req.body;
+  console.log(`Received verified event: ${event.event_type}`);
+  res.status(200).json({ received: true });
+}
+```
+
+```python Python (FastAPI / Flask)
+import hmac
+import hashlib
+import os
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+WEBHOOK_SECRET = os.environ.get('EXTRA_SCOOP_WEBHOOK_SECRET', '').encode('utf-8')
+
+@app.route('/webhooks/extrascoop', methods=['POST'])
+def receive_webhook():
+    signature = request.headers.get('X-Signature', '')
+    raw_payload = request.get_data()
+
+    computed_sig = hmac.new(WEBHOOK_SECRET, raw_payload, hashlib.sha256).hexdigest()
+
+    if not hmac.compare_digest(signature, computed_sig):
+        return jsonify({"error": "Unauthorized: Signature mismatch"}), 401
+
+    data = request.json
+    print(f"Verified event received: {data.get('event_type')}")
+    return jsonify({"received": True}), 200
+```
+</CodeGroup>
+
+
+
+================================================================================
+## URL: https://docs.extrascoop.app/developer/errors-and-limits
+================================================================================
+
+---
+title: "Errors & Rate Limits"
+description: "Standard HTTP error codes, rate limits, and error handling guidelines for developers."
+---
+
+The Extra Scoop API returns standard HTTP status codes and structured JSON error responses to guide client integration and automated exception handling.
+
+```mermaid
+graph LR
+    A[API Request] --> B{Valid Request?}
+    B -->|Yes| C[200 OK Response]
+    B -->|No| D[4xx Client Error]
+    B -->|Rate Exceeded| E[429 Too Many Requests]
+    B -->|Server Issue| F[5xx Server Error]
+```
+
+## Standard Error Response Format
+
+When an API request fails, the response body contains a structured error payload:
+
+```json
+{
+  "error": {
+    "code": "INVALID_BID_AMOUNT",
+    "message": "Bid amount of £4.00 is below the minimum platform bound of £5.00.",
+    "status": 400
+  }
+}
+```
+
+## HTTP Status Codes
+
+| Status Code | Code Identifier | Description & Resolution |
+| :--- | :--- | :--- |
+| **`400 Bad Request`** | `BAD_REQUEST` | The request body or query parameters failed validation. Check parameter types and bounds. |
+| **`401 Unauthorized`** | `UNAUTHORIZED` | The `Authorization` header is missing, expired, or malformed. Refresh your token. |
+| **`403 Forbidden`** | `FORBIDDEN` | Your organisation lacks permissions for this action (e.g., attempting to access an unlicensed master file). |
+| **`404 Not Found`** | `NOT_FOUND` | The requested scoop, offer, or digital deed does not exist. |
+| **`409 Conflict`** | `OFFER_ALREADY_PROCESSED` | The targeted offer has already been accepted, expired, or declined by the creator. |
+| **`429 Too Many Requests`** | `RATE_LIMIT_EXCEEDED` | Your integration has exceeded its hourly request allocation. Back off and retry. |
+| **`500 Internal Error`** | `INTERNAL_SERVER_ERROR` | An unexpected server error occurred. Contact platform support if the issue persists. |
+
+## Rate Limits
+
+To guarantee high availability and low latency across the newsroom wire, requests are rate-limited per API token:
+
+| Tier | Read Requests | Dealroom Actions | Webhook Dispatches |
+| :--- | :--- | :--- | :--- |
+| **Standard Newsroom** | 1,000 requests / min | 120 bids / min | Unlimited |
+| **Enterprise Broadcast Bureau** | 10,000 requests / min | 600 bids / min | Unlimited |
+
+### Rate Limit Headers
+
+Every HTTP response includes standard rate limit headers:
+
+```http
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 984
+X-RateLimit-Reset: 1725055200
+```
+
+If you receive a `429 Too Many Requests` response, read the `Retry-After` header and implement exponential backoff before repeating the request.
+
+

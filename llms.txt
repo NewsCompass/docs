@@ -2,46 +2,60 @@
 
 > Extra Scoop is an institutional media network bridging eyewitnesses on the ground with broadcast newsrooms through hardware-backed capture, automated authenticity verification, and cryptographic licensing.
 
-## Platform Summary
+Full documentation archive: https://docs.extrascoop.app/llms-full.txt
 
-Extra Scoop establishes an unbroken chain of custody for breaking news dispatches:
-* **Eyewitness Mobile App:** An iOS and Android application enabling citizens and field reporters to record verified footage, preserve camera metadata, negotiate commercial licences in real time, and receive instant bank payouts.
-* **Newsroom Terminal:** A multi-stream desktop intelligence desk for wire editors to monitor incoming dispatches, inspect verification signals, acquire exclusive broadcast rights, and export packages directly to broadcast CMS systems.
+## Introduction
+
+* [Platform Overview](https://docs.extrascoop.app/introduction/overview): High-level introduction to the eyewitness mobile app and newsroom terminal workflows.
+* [Platform Glossary](https://docs.extrascoop.app/introduction/glossary): Canonical definitions for core platform terminology, provenance frameworks, and legal deeds.
 
 ## Core Concepts
 
-* **[Silicon Trust™ Architecture](/concepts/silicon-trust):** Multi-stage integrity pipeline incorporating synthetic-media screening, neural watermarking, C2PA manifest injection, and the Provenance Invariance raw file purge guarantee.
-* **[Digital Deeds & Provenance](/concepts/digital-deeds):** Standardised ownership instruments anchored to the Base layer-2 blockchain and decentralised IPFS storage, providing legal indemnity and transparent commercial terms.
-* **[Trust Scores & Verification](/concepts/trust-scores):** Dynamic credibility ratings computed from hardware attestation, temporal/spatial consistency, synthetic-media analysis, and creator track record.
-* **[Smart Escrow & Settlement](/concepts/smart-escrow):** Automated settlement engine locking newsroom funds (£5.00 min to £1,000,000.00 max) and executing instant payout upon licence acceptance.
+* [Silicon Trust™ Architecture](https://docs.extrascoop.app/concepts/silicon-trust): Multi-stage integrity pipeline incorporating synthetic-media screening, neural watermarking, C2PA manifest injection, and the Provenance Invariance raw file purge guarantee.
+* [Digital Deeds & Provenance](https://docs.extrascoop.app/concepts/digital-deeds): Standardised ownership instruments anchored to the Base layer-2 blockchain and decentralised IPFS storage, providing legal indemnity and transparent commercial terms.
+* [Trust Scores & Verification](https://docs.extrascoop.app/concepts/trust-scores): Dynamic credibility ratings computed from hardware attestation, temporal/spatial consistency, synthetic-media analysis, and creator track record.
+* [Smart Escrow & Settlement](https://docs.extrascoop.app/concepts/smart-escrow): Automated settlement engine locking newsroom funds (£5.00 min to £1,000,000.00 max) and executing instant payout upon licence acceptance.
 
 ## Eyewitness Mobile App
 
-* **[Quickstart Guide](/eyewitness/quickstart):** Installation, security PIN setup, biometric authentication, source privacy controls, and reporting personas (Witness, Field Reporter, Truth Seeker).
-* **[Capturing Verified Footage](/eyewitness/capturing-footage):** In-app camera recording, sensor metadata extraction, location verification, and LocalForage offline queueing.
-* **[The Dealroom & Bidding](/eyewitness/dealroom-bidding):** Reviewing incoming newsroom offers, evaluating exclusive versus syndication licences, countering bids, and accepting terms.
-* **[Payouts & Stripe Connect](/eyewitness/payouts-stripe):** Connecting bank accounts, tracking available balances and lifetime earnings, and executing automated transfers via Stripe Connect.
-* **[Ephemeral E2EE Messenger](/eyewitness/ephemeral-messenger):** Source confidentiality channel engineered with ML-KEM 768 (Kyber) post-quantum key encapsulation, RSA-OAEP 2048, AES-GCM 256, Apple Secure Enclave P-256 signatures, RAM-only session storage, and deterministic memory noise wiping.
+* [Quickstart Guide](https://docs.extrascoop.app/eyewitness/quickstart): Mobile app installation, security PIN setup, biometric authentication, source privacy controls, and reporting personas (Witness, Field Reporter, Truth Seeker).
+* [Capturing Verified Footage](https://docs.extrascoop.app/eyewitness/capturing-footage): In-app camera recording, sensor metadata extraction, geographic tagging, and LocalForage offline queueing.
+* [The Dealroom & Bidding](https://docs.extrascoop.app/eyewitness/dealroom-bidding): Receiving incoming newsroom bids, evaluating exclusive versus syndication licences, submitting counter-offers, and accepting terms.
+* [Payouts & Stripe Connect](https://docs.extrascoop.app/eyewitness/payouts-stripe): Connecting bank accounts, tracking available balances and lifetime earnings, and executing automated transfers via Stripe Connect.
+* [Ephemeral E2EE Messenger](https://docs.extrascoop.app/eyewitness/ephemeral-messenger): Source confidentiality channel engineered with ML-KEM 768 (Kyber) post-quantum key encapsulation, RSA-OAEP 2048, AES-GCM 256, Apple Secure Enclave P-256 signatures, RAM-only session storage, and deterministic memory noise wiping.
 
 ## Newsroom Terminal
 
-* **[Terminal Overview](/terminal/overview):** High-speed desktop command centre featuring Workspace Columns, Grid Feed, and Deed Vault modes.
-* **[Workspace Columns & Search](/terminal/workspace-columns):** Multi-stream feed organisation, OmniCommand bar, Boolean query syntax (`AND`, `OR`, `NOT`, `trust:>N`, `#hashtag`), and sonar acoustic radar alerts.
-* **[Concord Dealroom & Licensing](/terminal/concord-dealroom):** Evaluating verification reports, placing commercial bids, negotiating counter-proposals, and executing smart escrow locks.
-* **[The Deed Vault](/terminal/deed-vault):** Permanent legal and compliance archive for inspecting cryptographic anchors, verifying Base layer-2 receipts, and downloading high-resolution master files.
-* **[Wire Format Exporter](/terminal/wire-exporter):** 1-click broadcast package export formatted for IPTC NewsML-G2 XML (compatible with BBC ENPS, AP Newsroom, Reuters Connect) and newsroom CMS JSON webhooks.
+* [Terminal Overview](https://docs.extrascoop.app/terminal/overview): High-speed desktop command centre featuring Workspace Columns, Grid Feed, and Deed Vault modes.
+* [Workspace Columns & Search](https://docs.extrascoop.app/terminal/workspace-columns): Multi-stream feed organisation, OmniCommand bar, Boolean query syntax (`AND`, `OR`, `NOT`, `trust:>N`, `#hashtag`), and sonar acoustic radar alerts.
+* [Concord Dealroom & Licensing](https://docs.extrascoop.app/terminal/concord-dealroom): Evaluating verification reports, placing commercial bids, negotiating counter-proposals, and executing smart escrow locks.
+* [The Deed Vault](https://docs.extrascoop.app/terminal/deed-vault): Permanent legal and compliance archive for inspecting cryptographic anchors, verifying Base layer-2 receipts, and downloading high-resolution master files.
+* [Wire Format Exporter](https://docs.extrascoop.app/terminal/wire-exporter): 1-click broadcast package export formatted for IPTC NewsML-G2 XML (compatible with BBC ENPS, AP Newsroom, Reuters Connect) and newsroom CMS JSON webhooks.
 
 ## Developer Hub
 
-* **[API Authentication](/developer/api-authentication):** Authenticating programmatic requests using Bearer JWT tokens with runnable cURL, TypeScript, and Python examples.
-* **[Webhooks Integration](/developer/webhooks):** Real-time event subscriptions (`escrow.locked`, `deed.anchored`, `media.ready`, `scoop.verified`) with timing-safe HMAC-SHA256 signature verification.
-* **[Errors & Rate Limits](/developer/errors-and-limits):** Standard HTTP response codes, error payloads, and API tier rate limits.
+* [API Authentication](https://docs.extrascoop.app/developer/api-authentication): Authenticating programmatic requests using Bearer JWT tokens with runnable cURL, TypeScript, and Python code examples.
+* [Webhooks Integration](https://docs.extrascoop.app/developer/webhooks): Real-time event subscriptions (`escrow.locked`, `deed.anchored`, `media.ready`, `scoop.verified`) with timing-safe HMAC-SHA256 signature verification.
+* [Errors & Rate Limits](https://docs.extrascoop.app/developer/errors-and-limits): Standard HTTP response status codes, error payloads, and API tier rate limits.
 
-## Key Terminology
+## Complete Pages Map
 
-* **Silicon Trust™:** Layered provenance framework combining synthetic-media screening, hardware attestation, and signed manifests.
-* **Digital Deed:** Immutable ownership certificate anchored on Base layer-2 and decentralised storage.
-* **Trust Score:** Dynamic reputation rating evaluating capture integrity, hardware signals, and media authenticity.
-* **Provenance Invariance:** Security guarantee ensuring that unwatermarked raw source assets are permanently purged from public access once protected.
-* **Concord Dealroom:** Institutional transaction desk for commercial bidding and media licensing.
-* **Blind ID:** Cryptographically masked identifier protecting contributor identity while maintaining reputational continuity.
+1. [Platform Overview](https://docs.extrascoop.app/introduction/overview)
+2. [Platform Glossary](https://docs.extrascoop.app/introduction/glossary)
+3. [Silicon Trust™ Architecture](https://docs.extrascoop.app/concepts/silicon-trust)
+4. [Digital Deeds & Provenance](https://docs.extrascoop.app/concepts/digital-deeds)
+5. [Trust Scores & Verification](https://docs.extrascoop.app/concepts/trust-scores)
+6. [Smart Escrow & Settlement](https://docs.extrascoop.app/concepts/smart-escrow)
+7. [Eyewitness App Quickstart](https://docs.extrascoop.app/eyewitness/quickstart)
+8. [Capturing Verified Footage](https://docs.extrascoop.app/eyewitness/capturing-footage)
+9. [The Dealroom & Bidding](https://docs.extrascoop.app/eyewitness/dealroom-bidding)
+10. [Payouts & Stripe Connect](https://docs.extrascoop.app/eyewitness/payouts-stripe)
+11. [Ephemeral E2EE Messenger](https://docs.extrascoop.app/eyewitness/ephemeral-messenger)
+12. [Newsroom Terminal Overview](https://docs.extrascoop.app/terminal/overview)
+13. [Workspace Columns & Search](https://docs.extrascoop.app/terminal/workspace-columns)
+14. [Concord Dealroom & Licensing](https://docs.extrascoop.app/terminal/concord-dealroom)
+15. [The Deed Vault](https://docs.extrascoop.app/terminal/deed-vault)
+16. [Wire Format Exporter](https://docs.extrascoop.app/terminal/wire-exporter)
+17. [API Authentication](https://docs.extrascoop.app/developer/api-authentication)
+18. [Webhooks Integration](https://docs.extrascoop.app/developer/webhooks)
+19. [Errors & Rate Limits](https://docs.extrascoop.app/developer/errors-and-limits)
