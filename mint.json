@@ -9,7 +9,7 @@
       ]
     },
     {
-      "group": "Core Concepts",
+      "group": "Verification Architecture",
       "pages": [
         "concepts/silicon-trust",
         "concepts/digital-deeds",

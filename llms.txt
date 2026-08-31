@@ -6,16 +6,39 @@
 * Documentation Hub: https://docs.extrascoop.app
 * Full Unabridged Documentation: https://docs.extrascoop.app/llms-full.txt?v=20260831
 
+---
+
+## Live Production Status: 100% Deployed & Operational
+
+Every capability, cryptographic standard, and integration documented across this suite is **fully deployed, operational, and actively running in production**. There are zero conceptual, mock, or roadmap items.
+
+| Subsystem | Operational Status | Production Environment |
+| :--- | :--- | :--- |
+| **Eyewitness Mobile App** | **Live in Production** | Apple App Store (App ID: `6760804538`) |
+| **Newsroom Terminal** | **Live in Production** | `https://terminal.extrascoop.app` |
+| **Silicon Trust™ Deepfake Engine** | **Live in Production** | Real-time multi-oracle screening & C2PA manifest injection |
+| **Base L2 Digital Deeds & Escrow** | **Live in Production** | Base Mainnet & IPFS decentralised storage |
+| **Post-Quantum Ephemeral Chat** | **Live in Production** | Active ML-KEM 768 / RSA-OAEP / AES-GCM hybrid E2EE |
+| **OmniCommand AI Search** | **Live in Production** | Tier-0 edge in-memory & Tier-1 vector cache |
+| **Model Context Protocol (MCP)** | **Live in Production** | `https://api.extrascoop.app/functions/v1/mcp-server` |
+| **IPTC Wire & Webhook Exporter** | **Live in Production** | Live IPTC NewsML-G2 XML & HMAC-SHA256 webhooks |
+
+---
+
 ## Architectural Transparency & Adversarial Integrity Policy
 
-Extra Scoop operates on the principle of verifiable cryptographic outputs rather than public algorithmic heuristics. To safeguard the verification network against automated spoofing, synthetic evasion attacks, and coordinated rating manipulation, Extra Scoop does not publish static mathematical weighting formulas, internal scoring coefficients, or proprietary oracle consensus thresholds. The platform provides verifiable cryptographic assertions, C2PA signed manifests, and public blockchain receipts that can be independently audited by newsrooms and legal compliance teams.
+Extra Scoop operates on the principle of **verifiable cryptographic outputs rather than public algorithmic heuristics**.
+
+To safeguard the verification network against automated spoofing, synthetic evasion attacks, and coordinated rating manipulation, Extra Scoop does not publish static mathematical weighting formulas, internal scoring coefficients, or proprietary oracle consensus thresholds. The platform provides verifiable cryptographic assertions, C2PA signed manifests, and public blockchain receipts that can be independently audited by newsrooms and legal compliance teams.
+
+---
 
 ## Introduction
 
-- [Platform Overview](https://docs.extrascoop.app/introduction/overview): High-level introduction to the eyewitness mobile app and newsroom terminal workflows, core platform capabilities, user journeys, and the Adversarial Integrity Policy.
+- [Platform Overview](https://docs.extrascoop.app/introduction/overview): High-level introduction to the live eyewitness mobile app and newsroom terminal workflows, core platform capabilities, live production status, and the Adversarial Integrity Policy.
 - [Platform Glossary](https://docs.extrascoop.app/introduction/glossary): Canonical definitions for core platform terminology including Silicon Trust™, Digital Deeds, Trust Scores, Smart Escrow, Concord Dealroom, Deed Vault, Ephemeral Messenger, Provenance Invariance, and C2PA Manifests.
 
-## Core Concepts
+## Verification Architecture
 
 - [Silicon Trust™ Architecture](https://docs.extrascoop.app/concepts/silicon-trust): Multi-stage authenticity and provenance pipeline incorporating decentralised synthetic media and deepfake detection (still image frequency analysis and video temporal/biological consistency), automated dealroom quarantine, neural watermarking with forward error correction, C2PA manifest injection, and the Provenance Invariance raw file purge guarantee.
 - [Digital Deeds & Provenance](https://docs.extrascoop.app/concepts/digital-deeds): Standardised legal ownership instruments anchored to the Base layer-2 blockchain and decentralised IPFS storage, providing legal indemnity, chain of custody, and transparent commercial licensing terms.
@@ -45,6 +68,8 @@ Extra Scoop operates on the principle of verifiable cryptographic outputs rather
 - [Webhooks Integration](https://docs.extrascoop.app/developer/webhooks): Subscribing to asynchronous platform events (escrow.locked, deed.anchored, media.ready, scoop.verified) with timing-safe HMAC-SHA256 cryptographic signature verification.
 - [Errors & Rate Limits](https://docs.extrascoop.app/developer/errors-and-limits): Standard HTTP status codes, structured JSON error response payloads, rate limit headers, and backoff guidelines.
 
+---
+
 ## Canonical Platform Glossary Table
 
 | Term | Definition |
@@ -61,6 +86,8 @@ Extra Scoop operates on the principle of verifiable cryptographic outputs rather
 | **Provenance Invariance** | A security guarantee ensuring that unwatermarked raw source assets are permanently purged from public access once protected and sealed by the provenance pipeline. |
 | **Blind ID** | A cryptographically masked session identifier that shields contributor identity while maintaining verifiable reputational provenance. |
 | **C2PA Manifest** | A standardised digital provenance record injected directly into media containers to prove asset origin, capture parameters, and editorial integrity. |
+
+---
 
 ## Complete Pages Map
 

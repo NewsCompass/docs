@@ -7,6 +7,19 @@ Website: https://extrascoop.app
 Index: https://docs.extrascoop.app/llms.txt
 
 ================================================================================
+## LIVE PRODUCTION STATUS: 100% DEPLOYED & OPERATIONAL
+================================================================================
+
+Every capability, cryptographic standard, and integration documented across this compendium is fully deployed, operational, and actively running in production. There are zero conceptual, mock, or roadmap items:
+
+- Eyewitness Mobile App: Live in Production on Apple App Store (App ID: 6760804538)
+- Newsroom Terminal: Live in Production at https://terminal.extrascoop.app
+- Silicon Trust™ Deepfake Engine: Live in Production with multi-oracle screening & C2PA manifest injection
+- Base L2 Digital Deeds & Escrow: Live in Production on Base Mainnet & IPFS decentralised storage
+- Post-Quantum Ephemeral Chat: Live in Production with active hybrid ML-KEM 768 / RSA-OAEP / AES-GCM
+- OmniCommand AI Search: Live in Production with Tier-0 in-memory edge cache (<1ms) & vector cache
+- Model Context Protocol (MCP): Live in Production at https://api.extrascoop.app/functions/v1/mcp-server
+- IPTC Wire & Webhook Exporter: Live in Production with IPTC NewsML-G2 XML & HMAC-SHA256 webhooks
 
 
 ################################################################################
@@ -15,7 +28,7 @@ Index: https://docs.extrascoop.app/llms.txt
 
 
 ================================================================================
-## DOCUMENT: Platform Overview
+## DOCUMENT: Platform Overview (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/introduction/overview
 ## SUMMARY: An introduction to Extra Scoop, the institutional verification and media licensing network.
 ================================================================================
@@ -33,6 +46,21 @@ graph LR
     C --> D[Smart Escrow Settlement]
     D --> E[Digital Deed & Wire Export]
 ```
+
+## Live Production Status
+
+Every system, cryptographic protocol, and integration documented across this site is **fully deployed, operational, and active in production**:
+
+| Subsystem | Operational Status | Production Environment |
+| :--- | :--- | :--- |
+| **Eyewitness Mobile App** | **Live in Production** | Apple App Store (App ID: `6760804538`) |
+| **Newsroom Terminal** | **Live in Production** | `https://terminal.extrascoop.app` |
+| **Silicon Trust™ Deepfake Engine** | **Live in Production** | Real-time multi-oracle screening & C2PA manifest injection |
+| **Base L2 Digital Deeds & Escrow** | **Live in Production** | Base Mainnet & IPFS decentralised storage |
+| **Post-Quantum Ephemeral Chat** | **Live in Production** | Active ML-KEM 768 / RSA-OAEP / AES-GCM hybrid E2EE |
+| **OmniCommand AI Search** | **Live in Production** | Tier-0 edge in-memory & Tier-1 vector cache |
+| **Model Context Protocol (MCP)** | **Live in Production** | `https://api.extrascoop.app/functions/v1/mcp-server` |
+| **IPTC Wire & Webhook Exporter** | **Live in Production** | Live IPTC NewsML-G2 XML & HMAC-SHA256 webhooks |
 
 ## How Extra Scoop Works
 
@@ -67,7 +95,7 @@ To get started, explore the [Platform Glossary](/introduction/glossary) or revie
 
 
 ================================================================================
-## DOCUMENT: Platform Glossary
+## DOCUMENT: Platform Glossary (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/introduction/glossary
 ## SUMMARY: Canonical terms and concepts used across the Extra Scoop documentation.
 ================================================================================
@@ -91,12 +119,12 @@ This glossary provides standard definitions for core architectural concepts, lic
 
 
 ################################################################################
-# GROUP: CORE CONCEPTS
+# GROUP: VERIFICATION ARCHITECTURE
 ################################################################################
 
 
 ================================================================================
-## DOCUMENT: Silicon Trust™ Architecture
+## DOCUMENT: Silicon Trust™ Architecture (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/concepts/silicon-trust
 ## SUMMARY: How Extra Scoop verifies media authenticity, screens for synthetic media, and protects eyewitness provenance.
 ================================================================================
@@ -196,7 +224,7 @@ Once purged, only the sealed version with embedded provenance is accessible for 
 
 
 ================================================================================
-## DOCUMENT: Digital Deeds & Provenance
+## DOCUMENT: Digital Deeds & Provenance (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/concepts/digital-deeds
 ## SUMMARY: How Digital Deeds establish legal ownership, licensing rights, and cryptographic custody.
 ================================================================================
@@ -249,7 +277,7 @@ For procedural guidance on buying and managing deeds, see the [Concord Dealroom 
 
 
 ================================================================================
-## DOCUMENT: Trust Scores & Verification
+## DOCUMENT: Trust Scores & Verification (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/concepts/trust-scores
 ## SUMMARY: How Extra Scoop measures media credibility, creator reputation, and feed priority.
 ================================================================================
@@ -301,7 +329,7 @@ Dispatches that clear all integrity checks display distinct verification indicat
 
 
 ================================================================================
-## DOCUMENT: Smart Escrow & Settlement
+## DOCUMENT: Smart Escrow & Settlement (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/concepts/smart-escrow
 ## SUMMARY: How automated escrow secures licensing transactions for both creators and newsrooms.
 ================================================================================
@@ -361,7 +389,7 @@ To maintain institutional compliance and market integrity, all commercial bids w
 
 
 ================================================================================
-## DOCUMENT: Eyewitness App Quickstart
+## DOCUMENT: Eyewitness App Quickstart (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/eyewitness/quickstart
 ## SUMMARY: How to set up the Extra Scoop mobile app and begin reporting verified news.
 ================================================================================
@@ -418,7 +446,7 @@ Next, learn how to [Capture Verified Footage](/eyewitness/capturing-footage).
 
 
 ================================================================================
-## DOCUMENT: Capturing Verified Footage
+## DOCUMENT: Capturing Verified Footage (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/eyewitness/capturing-footage
 ## SUMMARY: How to record, certify, and publish breaking media from the ground.
 ================================================================================
@@ -476,7 +504,7 @@ To understand how newsrooms bid on your published footage, proceed to [Dealroom 
 
 
 ================================================================================
-## DOCUMENT: The Dealroom & Bidding
+## DOCUMENT: The Dealroom & Bidding (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/eyewitness/dealroom-bidding
 ## SUMMARY: How to review incoming offers, negotiate terms, and license your scoops.
 ================================================================================
@@ -539,7 +567,7 @@ Next, learn how to manage your banking details and withdraw earnings in [Payouts
 
 
 ================================================================================
-## DOCUMENT: Payouts & Stripe Connect
+## DOCUMENT: Payouts & Stripe Connect (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/eyewitness/payouts-stripe
 ## SUMMARY: How to connect your bank account, track earnings, and receive instant payouts.
 ================================================================================
@@ -589,7 +617,7 @@ To protect your earnings against unauthorized withdrawals or account compromise:
 
 
 ================================================================================
-## DOCUMENT: Ephemeral E2EE Messenger
+## DOCUMENT: Ephemeral E2EE Messenger (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/eyewitness/ephemeral-messenger
 ## SUMMARY: How Extra Scoop safeguards source confidentiality and encrypted communications.
 ================================================================================
@@ -637,7 +665,7 @@ The messaging architecture enforces strict operational confidentiality controls:
 
 
 ================================================================================
-## DOCUMENT: Newsroom Terminal Overview
+## DOCUMENT: Newsroom Terminal Overview (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/terminal/overview
 ## SUMMARY: An institutional desktop command centre for newsrooms, wire editors, and investigative desks.
 ================================================================================
@@ -679,7 +707,7 @@ Next, learn how to configure your multi-column streams and use AI search in [Wor
 
 
 ================================================================================
-## DOCUMENT: Workspace Columns & AI Search
+## DOCUMENT: Workspace Columns & AI Search (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/terminal/workspace-columns
 ## SUMMARY: How to organise real-time monitoring columns and leverage the AI-powered OmniCommand search engine.
 ================================================================================
@@ -770,7 +798,7 @@ To ensure editors never miss breaking developments while multitasking across scr
 
 
 ================================================================================
-## DOCUMENT: Concord Dealroom & Licensing
+## DOCUMENT: Concord Dealroom & Licensing (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/terminal/concord-dealroom
 ## SUMMARY: How to negotiate, acquire, and manage exclusive commercial media licences.
 ================================================================================
@@ -830,7 +858,7 @@ The instant an eyewitness accepts your offer:
 
 
 ================================================================================
-## DOCUMENT: The Deed Vault
+## DOCUMENT: The Deed Vault (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/terminal/deed-vault
 ## SUMMARY: How to manage acquired digital deeds, verify on-chain anchors, and access licensed media.
 ================================================================================
@@ -877,7 +905,7 @@ To export your licensed assets into newsroom automation systems, see [Wire Forma
 
 
 ================================================================================
-## DOCUMENT: Wire Format Exporter
+## DOCUMENT: Wire Format Exporter (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/terminal/wire-exporter
 ## SUMMARY: How to export verified dispatches into IPTC NewsML-G2 XML and newsroom CMS webhooks.
 ================================================================================
@@ -974,7 +1002,7 @@ To prevent accidental broadcast of unlicensed material, the exporter dynamically
 
 
 ================================================================================
-## DOCUMENT: API Authentication
+## DOCUMENT: API Authentication (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/developer/api-authentication
 ## SUMMARY: How to authenticate programmatic requests to the Extra Scoop Edge API.
 ================================================================================
@@ -1057,7 +1085,7 @@ print(response.json())
 
 
 ================================================================================
-## DOCUMENT: Model Context Protocol (MCP)
+## DOCUMENT: Model Context Protocol (MCP) (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/developer/mcp-server
 ## SUMMARY: How to connect Claude Desktop and AI newsroom copilots to the Extra Scoop live intelligence wire.
 ================================================================================
@@ -1148,7 +1176,7 @@ Claude will autonomously invoke `search_scoops`, inspect the C2PA verification s
 
 
 ================================================================================
-## DOCUMENT: Webhooks Integration
+## DOCUMENT: Webhooks Integration (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/developer/webhooks
 ## SUMMARY: How to subscribe to real-time licensing, verification, and settlement events.
 ================================================================================
@@ -1252,7 +1280,7 @@ def receive_webhook():
 
 
 ================================================================================
-## DOCUMENT: Errors & Rate Limits
+## DOCUMENT: Errors & Rate Limits (Status: Live in Production)
 ## URL: https://docs.extrascoop.app/developer/errors-and-limits
 ## SUMMARY: Standard HTTP error codes, rate limits, and error handling guidelines for developers.
 ================================================================================
