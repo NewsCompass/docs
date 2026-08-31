@@ -47,6 +47,17 @@ The platform operates across four continuous stages:
 | **Smart Escrow** | Ensures guaranteed payment prior to the release of high-resolution source media. | Secures bidding funds in escrow until licensing terms are formally accepted. |
 | **Ephemeral Chat** | Protects source confidentiality with post-quantum end-to-end encryption. | Enables direct, secure price negotiation with eyewitnesses on the scene. |
 
+---
+
+## Architectural Transparency & Adversarial Design
+
+Extra Scoop operates on the principle of **verifiable cryptographic outputs rather than public algorithmic heuristics**.
+
+<Note>
+**Adversarial Integrity Policy**  
+To protect the verification network against automated spoofing, synthetic evasion attacks, and coordinated rating manipulation, Extra Scoop does not publish static mathematical weighting formulas, internal scoring coefficients, or proprietary oracle consensus thresholds. The platform provides verifiable cryptographic assertions, C2PA signed manifests, and public blockchain receipts that can be independently audited by newsrooms and legal compliance teams.
+</Note>
+
 To get started, explore the [Platform Glossary](/introduction/glossary) or review the [Silicon Trust™ Architecture](/concepts/silicon-trust).
 
 
@@ -275,8 +286,10 @@ A Trust Score is computed across multiple independent integrity layers:
 | **Synthetic Media Analysis** | Independent deepfake and generative artefact detection. | Filters out manipulated or AI-generated media before distribution. |
 | **Historical Track Record** | Verifiable history of previously licensed, authentic dispatches. | Rewards established eyewitnesses while maintaining rigorous checks for first-time uploaders. |
 
-> [!NOTE]
-> The exact weighting and mathematical models powering the Trust Score are proprietary to protect against adversarial manipulation and reverse engineering.
+<Note>
+**Adversarial Protection Boundary**  
+To safeguard the network against reverse-engineering and coordinated rating manipulation, specific mathematical scoring coefficients and decay weights remain confidential within the core consensus engine. Verification integrity is proven through cryptographically signed C2PA manifests and tamper-evident ledger notarization.
+</Note>
 
 ## Feed Ranking and Discovery
 
