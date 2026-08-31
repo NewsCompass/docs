@@ -35,6 +35,7 @@ Full documentation archive: https://docs.extrascoop.app/llms-full.txt
 ## Developer Hub
 
 * [API Authentication](https://docs.extrascoop.app/developer/api-authentication): Authenticating programmatic requests using Bearer JWT tokens with runnable cURL, TypeScript, and Python code examples.
+* [Model Context Protocol (MCP)](https://docs.extrascoop.app/developer/mcp-server): Connecting Claude Desktop, Cursor, and autonomous AI newsroom agents to the live intelligence wire via MCP tools (`search_scoops`, `get_scoop_details`, `synthesize_briefing`, `make_offer`).
 * [Webhooks Integration](https://docs.extrascoop.app/developer/webhooks): Real-time event subscriptions (`escrow.locked`, `deed.anchored`, `media.ready`, `scoop.verified`) with timing-safe HMAC-SHA256 signature verification.
 * [Errors & Rate Limits](https://docs.extrascoop.app/developer/errors-and-limits): Standard HTTP response status codes, error payloads, and API tier rate limits.
 
@@ -57,5 +58,6 @@ Full documentation archive: https://docs.extrascoop.app/llms-full.txt
 15. [The Deed Vault](https://docs.extrascoop.app/terminal/deed-vault)
 16. [Wire Format Exporter](https://docs.extrascoop.app/terminal/wire-exporter)
 17. [API Authentication](https://docs.extrascoop.app/developer/api-authentication)
-18. [Webhooks Integration](https://docs.extrascoop.app/developer/webhooks)
-19. [Errors & Rate Limits](https://docs.extrascoop.app/developer/errors-and-limits)
+18. [Model Context Protocol (MCP)](https://docs.extrascoop.app/developer/mcp-server)
+19. [Webhooks Integration](https://docs.extrascoop.app/developer/webhooks)
+20. [Errors & Rate Limits](https://docs.extrascoop.app/developer/errors-and-limits)

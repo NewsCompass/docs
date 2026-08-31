@@ -41,6 +41,7 @@
       "group": "Developer Hub",
       "pages": [
         "developer/api-authentication",
+        "developer/mcp-server",
         "developer/webhooks",
         "developer/errors-and-limits"
       ]
