@@ -1,16 +1,21 @@
 ---
-title: "Workspace Columns & Search"
-description: "How to organise real-time monitoring columns and execute advanced Boolean queries."
+title: "Workspace Columns & AI Search"
+description: "How to organise real-time monitoring columns and leverage the AI-powered OmniCommand search engine."
 ---
 
-The Newsroom Terminal workspace allows you to assemble tailored monitoring desks by configuring multi-column intelligence feeds and running lexical or natural language searches.
+The Newsroom Terminal workspace allows you to assemble tailored monitoring desks by configuring multi-column intelligence feeds and executing rapid AI-powered natural language queries or structured Boolean searches.
 
 ```mermaid
-graph LR
-    A[Terminal Desk] --> B[Column 1: Breaking Crisis]
-    A --> C[Column 2: Politics Wire]
-    A --> D[Column 3: High-Trust Verified]
-    E[OmniCommand Bar] -->|Filters All Columns| A
+graph TD
+    A[Editor Query / Command] --> B[OmniCommand AI Gateway]
+    B -->|Tier-0| C[Normalized Prompt Cache <1ms]
+    B -->|Tier-1| D[Semantic Vector Cache]
+    B -->|Inference| E[AI Natural Language Intent Compiler]
+    C --> F[Structured Newsroom Query]
+    D --> F
+    E --> F
+    F --> G[Real-Time Intelligence Data Grid]
+    F --> H[AI Newsroom Briefing Synthesis]
 ```
 
 ## Managing Workspace Columns
@@ -32,29 +37,52 @@ You can configure multiple independent columns side-by-side to monitor different
   </Step>
 </Steps>
 
-## OmniCommand & Boolean Search
+## OmniCommand AI Search Engine
 
-The **OmniCommand Bar** located at the top of the terminal accepts both natural language queries and structured Boolean expressions.
+The **OmniCommand Bar** at the top of the terminal acts as an AI-powered intelligence compiler that translates complex editorial questions into high-speed database queries and synthesized briefings.
 
-### Boolean Query Syntax
+### How the AI Reduces Latency
 
-You can refine your searches using standard operators:
+To deliver sub-second search responses across massive media archives, the OmniCommand architecture uses a multi-tier caching and compilation pipeline:
+
+```mermaid
+graph LR
+    Query[Editor Prompt] --> Tier0[Tier-0: In-Memory Edge Cache]
+    Tier0 -->|Hit ~0ms| Exec[Fast Database Execution]
+    Tier0 -->|Miss| Tier1[Tier-1: Semantic Vector Cache]
+    Tier1 -->|Similarity Match| Exec
+    Tier1 -->|Miss| LLM[AI Intent Compiler]
+    LLM --> Exec
+```
+
+1. **Tier-0 Edge In-Memory Cache (Sub-1ms):** Frequently requested newsroom queries and normalized prompt patterns are resolved instantly at the edge.
+2. **Tier-1 Semantic Vector Cache:** Converts incoming queries into vector embeddings and matches semantically identical requests using cosine distance indexing without invoking LLM inference repeatedly.
+3. **AI Natural Language Intent Compiler:** For novel prompts, a specialized language model extracts keywords, category beats, credibility requirements, media format preferences (video vs still photography), geographic bounds, and timeframes (e.g. 24h, 7d, 30d).
+4. **Deterministic Client Fallback:** If offline or experiencing connection drops, a local heuristic compiler processes keywords instantly without interruption.
+
+### AI Newsroom Briefing Synthesis
+
+When you run a search, the OmniCommand engine can also generate an automated **AI Newsroom Briefing**—a concise 2–3 sentence factual summary synthesizing key breaking developments across all retrieved dispatches to accelerate editorial decision-making.
+
+---
+
+## Boolean Query Syntax
+
+In addition to conversational AI prompts, editors can execute precise Boolean queries directly in the OmniCommand Bar:
 
 | Operator | Syntax Example | Behaviour |
 | :--- | :--- | :--- |
 | **AND** | `parliament AND protest` | Matches dispatches containing both terms. |
 | **OR** | `fire OR explosion` | Matches dispatches containing either term. |
 | **NOT** | `aviation NOT military` | Excludes dispatches containing the specified term. |
-| **Trust Threshold** | `trust:>85` | Filters for dispatches with a Trust Score exceeding the specified level. |
-| **Hashtags** | `#Westminster` | Restricts results to specific indexed hashtags. |
+| **Trust Threshold** | `trust:>85` | Restricts results to dispatches with a Trust Score exceeding the specified level. |
+| **Hashtags** | `#Westminster` | Filters by indexed community or newsroom hashtags. |
 
-### Natural Language Search
-
-You can also enter plain-language search instructions, such as *"Show verified footage of protests in central London from today"*. The terminal's newsroom compiler automatically extracts core keywords, matches relevant geographic bounds, and applies credibility filters.
+---
 
 ## Sonar Acoustic Radar
 
-To ensure editors never miss breaking developments while working across multiple screens, the terminal incorporates an acoustic radar:
+To ensure editors never miss breaking developments while multitasking across screens, the terminal includes a synthesised acoustic radar:
 
-* **Radar Pings:** Generates a subtle, synthesised acoustic ping whenever a new high-priority dispatch matching your column criteria lands on the wire.
-* **Volume & Threshold Controls:** Configure audio alert sensitivity or mute specific beats in **Terminal Preferences > Audio**.
+* **Radar Pings:** Emits a subtle acoustic chime whenever a newly published dispatch matching your column criteria hits the wire.
+* **Custom Sensitivity:** Configure audio frequency, alert volume, or mute specific categories in **Terminal Settings > Audio**.

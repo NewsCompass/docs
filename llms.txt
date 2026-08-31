@@ -27,7 +27,7 @@ Full documentation archive: https://docs.extrascoop.app/llms-full.txt
 ## Newsroom Terminal
 
 * [Terminal Overview](https://docs.extrascoop.app/terminal/overview): High-speed desktop command centre featuring Workspace Columns, Grid Feed, and Deed Vault modes.
-* [Workspace Columns & Search](https://docs.extrascoop.app/terminal/workspace-columns): Multi-stream feed organisation, OmniCommand bar, Boolean query syntax (`AND`, `OR`, `NOT`, `trust:>N`, `#hashtag`), and sonar acoustic radar alerts.
+* [Workspace Columns & AI Search](https://docs.extrascoop.app/terminal/workspace-columns): Multi-stream feed organisation, OmniCommand AI search with multi-tier latency caching (Tier-0 in-memory edge cache, Tier-1 semantic vector cache, AI intent compiler, and briefing synthesis), Boolean query syntax (`AND`, `OR`, `NOT`, `trust:>N`, `#hashtag`), and sonar acoustic radar alerts.
 * [Concord Dealroom & Licensing](https://docs.extrascoop.app/terminal/concord-dealroom): Evaluating verification reports, placing commercial bids, negotiating counter-proposals, and executing smart escrow locks.
 * [The Deed Vault](https://docs.extrascoop.app/terminal/deed-vault): Permanent legal and compliance archive for inspecting cryptographic anchors, verifying Base layer-2 receipts, and downloading high-resolution master files.
 * [Wire Format Exporter](https://docs.extrascoop.app/terminal/wire-exporter): 1-click broadcast package export formatted for IPTC NewsML-G2 XML (compatible with BBC ENPS, AP Newsroom, Reuters Connect) and newsroom CMS JSON webhooks.
@@ -52,7 +52,7 @@ Full documentation archive: https://docs.extrascoop.app/llms-full.txt
 10. [Payouts & Stripe Connect](https://docs.extrascoop.app/eyewitness/payouts-stripe)
 11. [Ephemeral E2EE Messenger](https://docs.extrascoop.app/eyewitness/ephemeral-messenger)
 12. [Newsroom Terminal Overview](https://docs.extrascoop.app/terminal/overview)
-13. [Workspace Columns & Search](https://docs.extrascoop.app/terminal/workspace-columns)
+13. [Workspace Columns & AI Search](https://docs.extrascoop.app/terminal/workspace-columns)
 14. [Concord Dealroom & Licensing](https://docs.extrascoop.app/terminal/concord-dealroom)
 15. [The Deed Vault](https://docs.extrascoop.app/terminal/deed-vault)
 16. [Wire Format Exporter](https://docs.extrascoop.app/terminal/wire-exporter)
