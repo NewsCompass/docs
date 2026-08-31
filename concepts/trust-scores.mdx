@@ -26,10 +26,9 @@ A Trust Score is computed across multiple independent integrity layers:
 | **Synthetic Media Analysis** | Independent deepfake and generative artefact detection. | Filters out manipulated or AI-generated media before distribution. |
 | **Historical Track Record** | Verifiable history of previously licensed, authentic dispatches. | Rewards established eyewitnesses while maintaining rigorous checks for first-time uploaders. |
 
-<Note>
-**Adversarial Protection Boundary**  
-To safeguard the network against reverse-engineering and coordinated rating manipulation, specific mathematical scoring coefficients and decay weights remain confidential within the core consensus engine. Verification integrity is proven through cryptographically signed C2PA manifests and tamper-evident ledger notarization.
-</Note>
+## Scoring Evaluation
+
+Trust Scores are calculated dynamically upon ingestion and continuously updated as secondary signals (such as multi-device spatial triangulation, hardware attestation validity, and historical accuracy) are confirmed. Ratings range from 0 to 100, where dispatches scoring above 80 receive elevated wire priority.
 
 ## Feed Ranking and Discovery
 

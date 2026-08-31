@@ -1,53 +1,28 @@
 # Extra Scoop Documentation
 
-> Extra Scoop is an institutional media network bridging eyewitnesses on the ground with broadcast newsrooms through hardware-backed capture, automated authenticity verification, and cryptographic licensing.
+> Technical and product documentation for Extra Scoop, an institutional media network connecting eyewitnesses with newsrooms through hardware-backed capture, automated authenticity verification, and cryptographic licensing.
 
-* Root Website: https://extrascoop.app
+* Platform: https://extrascoop.app
+* Newsroom Terminal: https://terminal.extrascoop.app
+* Eyewitness iOS App: https://apps.apple.com/gb/app/extra-scoop/id6760804538
 * Documentation Hub: https://docs.extrascoop.app
-* Full Unabridged Documentation: https://docs.extrascoop.app/llms-full.txt?v=latest
-
----
-
-## Live Production Status: 100% Deployed & Operational
-
-Every capability, cryptographic standard, and integration documented across this suite is **fully deployed, operational, and actively running in production**. There are zero conceptual, mock, or roadmap items.
-
-| Subsystem | Operational Status | Production Environment |
-| :--- | :--- | :--- |
-| **Eyewitness Mobile App** | **Live in Production** | Apple App Store (App ID: `6760804538`) |
-| **Newsroom Terminal** | **Live in Production** | `https://terminal.extrascoop.app` |
-| **Silicon Trust™ Deepfake Engine** | **Live in Production** | Real-time multi-oracle screening & C2PA manifest injection |
-| **Base L2 Digital Deeds & Escrow** | **Live in Production** | Base Mainnet & IPFS decentralised storage |
-| **Post-Quantum Ephemeral Chat** | **Live in Production** | Active ML-KEM 768 / RSA-OAEP / AES-GCM hybrid E2EE |
-| **OmniCommand AI Search** | **Live in Production** | Tier-0 edge in-memory & Tier-1 vector cache |
-| **Model Context Protocol (MCP)** | **Live in Production** | `https://api.extrascoop.app/functions/v1/mcp-server` |
-| **IPTC Wire & Webhook Exporter** | **Live in Production** | Live IPTC NewsML-G2 XML & HMAC-SHA256 webhooks |
-
----
-
-## Architectural Transparency & Adversarial Integrity Policy
-
-Extra Scoop operates on the principle of **verifiable cryptographic outputs rather than public algorithmic heuristics**.
-
-To safeguard the verification network against automated spoofing, synthetic evasion attacks, and coordinated rating manipulation, Extra Scoop does not publish static mathematical weighting formulas, internal scoring coefficients, or proprietary oracle consensus thresholds. The platform provides verifiable cryptographic assertions, C2PA signed manifests, and public blockchain receipts that can be independently audited by newsrooms and legal compliance teams.
-
----
+* Full Unabridged Compendium: https://docs.extrascoop.app/llms-full.txt?v=latest
 
 ## Introduction
 
-- [Platform Overview](https://docs.extrascoop.app/introduction/overview): High-level introduction to the live eyewitness mobile app and newsroom terminal workflows, core platform capabilities, live production status, and the Adversarial Integrity Policy.
-- [Platform Glossary](https://docs.extrascoop.app/introduction/glossary): Canonical definitions for core platform terminology including Silicon Trust™, Digital Deeds, Trust Scores, Smart Escrow, Concord Dealroom, Deed Vault, Ephemeral Messenger, Provenance Invariance, and C2PA Manifests.
+- [Platform Overview](https://docs.extrascoop.app/introduction/overview): High-level system architecture, operational phases from capture to broadcast delivery, core subsystem definitions, and user journeys.
+- [Platform Glossary](https://docs.extrascoop.app/introduction/glossary): Canonical definitions for core terminology including Silicon Trust™, Digital Deeds, Trust Scores, Smart Escrow, Concord Dealroom, Deed Vault, Ephemeral Messenger, Provenance Invariance, and C2PA Manifests.
 
 ## Verification Architecture
 
-- [Silicon Trust™ Architecture](https://docs.extrascoop.app/concepts/silicon-trust): Multi-stage authenticity and provenance pipeline incorporating decentralised synthetic media and deepfake detection (still image frequency analysis and video temporal/biological consistency), automated dealroom quarantine, neural watermarking with forward error correction, C2PA manifest injection, and the Provenance Invariance raw file purge guarantee.
-- [Digital Deeds & Provenance](https://docs.extrascoop.app/concepts/digital-deeds): Standardised legal ownership instruments anchored to the Base layer-2 blockchain and decentralised IPFS storage, providing legal indemnity, chain of custody, and transparent commercial licensing terms.
+- [Silicon Trust™ Architecture](https://docs.extrascoop.app/concepts/silicon-trust): Multi-stage verification pipeline incorporating synthetic media and deepfake detection (still image frequency analysis and video temporal/biological consistency), automated dealroom quarantine, neural watermarking with forward error correction, C2PA manifest injection, and the Provenance Invariance raw file purge guarantee.
+- [Digital Deeds & Provenance](https://docs.extrascoop.app/concepts/digital-deeds): Standardised legal ownership instruments anchored to the Base layer-2 blockchain and decentralised IPFS storage, establishing legal title, chain of custody, and commercial licensing terms.
 - [Trust Scores & Verification](https://docs.extrascoop.app/concepts/trust-scores): Dynamic credibility ratings computed from hardware device attestation (Apple Secure Enclave), spatial/temporal metadata consistency, synthetic media analysis, and creator track records.
 - [Smart Escrow & Settlement](https://docs.extrascoop.app/concepts/smart-escrow): Automated commercial settlement engine locking newsroom bidding funds (£5.00 minimum to £1,000,000.00 maximum) and executing instant payout to creators upon mutually agreed terms.
 
 ## Eyewitness Mobile App
 
-- [Eyewitness App Quickstart](https://docs.extrascoop.app/eyewitness/quickstart): Step-by-step setup for iOS and Android, security PIN configuration, biometric unlock, source privacy controls, reporting roles (Witness, Field Reporter, Truth Seeker), and dynamic recommendation engine adaptation.
+- [Eyewitness App Quickstart](https://docs.extrascoop.app/eyewitness/quickstart): Mobile application setup, security PIN configuration, biometric unlock, source privacy controls, reporting roles (Witness, Field Reporter, Truth Seeker), and dynamic recommendation engine adaptation.
 - [Capturing Verified Footage](https://docs.extrascoop.app/eyewitness/capturing-footage): In-app camera operation, hardware attestation metadata extraction, GPS coordinate verification, LocalForage offline queueing, and Blind ID source privacy.
 - [The Dealroom & Bidding](https://docs.extrascoop.app/eyewitness/dealroom-bidding): Receiving incoming newsroom offers, evaluating Exclusive Commercial Licences versus Syndication rights, submitting counter-proposals, and accepting terms within live countdown timers (3m, 5m, 10m, 30m, 1h).
 - [Payouts & Stripe Connect](https://docs.extrascoop.app/eyewitness/payouts-stripe): Connecting bank accounts via Stripe Express, monitoring available balances and lifetime royalties, and executing biometric-authenticated payouts.
@@ -56,10 +31,10 @@ To safeguard the verification network against automated spoofing, synthetic evas
 ## Newsroom Terminal
 
 - [Newsroom Terminal Overview](https://docs.extrascoop.app/terminal/overview): Desktop command centre for broadcast wire desks and investigative editors featuring Workspace Columns, Grid Feed, and Deed Vault modes.
-- [Workspace Columns & AI Search](https://docs.extrascoop.app/terminal/workspace-columns): Multi-stream beat monitoring, OmniCommand AI natural language search with multi-tier latency caching (Tier-0 edge in-memory cache <1ms, Tier-1 semantic vector cache, and AI intent compilation), Boolean query operators (AND, OR, NOT, trust:>N, #hashtag), and sonar acoustic radar alerts.
+- [Workspace Columns & AI Search](https://docs.extrascoop.app/terminal/workspace-columns): Multi-stream beat monitoring, OmniCommand search with multi-tier latency caching (Tier-0 edge in-memory cache <1ms, Tier-1 semantic vector cache, and AI intent compilation), Boolean query operators (AND, OR, NOT, trust:>N, #hashtag), and acoustic alert triggers.
 - [Concord Dealroom & Licensing](https://docs.extrascoop.app/terminal/concord-dealroom): Evaluating verification reports, placing commercial bids (£5.00 min to £1M max with 3m/5m/10m/30m/1h expiry presets), negotiating terms, and executing atomic escrow locks.
 - [The Deed Vault](https://docs.extrascoop.app/terminal/deed-vault): Permanent legal and compliance archive for inspecting cryptographic Merkle anchors, verifying Base layer-2 receipts, and downloading uncompressed master broadcast files.
-- [Wire Format Exporter](https://docs.extrascoop.app/terminal/wire-exporter): 1-click broadcast package exporter generating IPTC NewsML-G2 XML (compatible with BBC ENPS, AP Newsroom, Reuters Connect) and newsroom CMS JSON webhooks with commercial licensing enforcement.
+- [Wire Format Exporter](https://docs.extrascoop.app/terminal/wire-exporter): Broadcast package exporter generating IPTC NewsML-G2 XML (compatible with BBC ENPS, AP Newsroom, Reuters Connect) and newsroom CMS JSON webhooks with commercial licensing enforcement.
 
 ## Developer Hub
 
@@ -67,8 +42,6 @@ To safeguard the verification network against automated spoofing, synthetic evas
 - [Model Context Protocol (MCP)](https://docs.extrascoop.app/developer/mcp-server): Connecting Claude Desktop, Cursor, and autonomous AI newsroom agents to the live intelligence wire via native MCP tools (search_scoops, get_scoop_details, synthesize_briefing, make_offer).
 - [Webhooks Integration](https://docs.extrascoop.app/developer/webhooks): Subscribing to asynchronous platform events (escrow.locked, deed.anchored, media.ready, scoop.verified) with timing-safe HMAC-SHA256 cryptographic signature verification.
 - [Errors & Rate Limits](https://docs.extrascoop.app/developer/errors-and-limits): Standard HTTP status codes, structured JSON error response payloads, rate limit headers, and backoff guidelines.
-
----
 
 ## Canonical Platform Glossary Table
 
@@ -81,13 +54,11 @@ To safeguard the verification network against automated spoofing, synthetic evas
 | **Concord Dealroom** | An institutional negotiation interface enabling verified newsrooms to submit commercial bids, propose custom terms, and acquire exclusive media licences directly from eyewitnesses. |
 | **Deed Vault** | A cryptographically verifiable repository where creators and newsrooms inspect, track, and manage all active, pending, and settled digital deeds and licences. |
 | **Ephemeral Messenger** | An end-to-end encrypted communication channel engineered with post-quantum key encapsulation (ML-KEM 768), a 15-minute RAM-only lifetime, and deterministic memory purging. |
-| **Newsroom Terminal** | A real-time desktop intelligence desk featuring configurable multi-stream columns, AI search, acoustic radar alerts, and automated wire export. |
+| **Newsroom Terminal** | A real-time desktop intelligence desk featuring configurable multi-stream columns, AI search, acoustic alert monitors, and automated wire export. |
 | **Wire Exporter** | A formatting engine converting verified media packages into IPTC NewsML-G2 XML and webhook payloads compatible with major broadcast CMS systems. |
 | **Provenance Invariance** | A security guarantee ensuring that unwatermarked raw source assets are permanently purged from public access once protected and sealed by the provenance pipeline. |
 | **Blind ID** | A cryptographically masked session identifier that shields contributor identity while maintaining verifiable reputational provenance. |
 | **C2PA Manifest** | A standardised digital provenance record injected directly into media containers to prove asset origin, capture parameters, and editorial integrity. |
-
----
 
 ## Complete Pages Map
 
