@@ -1,19 +1,24 @@
-# Extra Scoop Full Documentation Compendium
+# Extra Scoop Documentation (Full Compendium)
 
-> Complete unabridged public documentation hosted at https://docs.extrascoop.app/
+> Complete unabridged product and developer documentation for Extra Scoop, hosted at https://docs.extrascoop.app
+
+Generated for large language models, crawlers, and automated intelligence agents.
+Website: https://extrascoop.app
+Index: https://docs.extrascoop.app/llms.txt
+
+================================================================================
 
 
-# Category: Introduction
+################################################################################
+# GROUP: INTRODUCTION
+################################################################################
 
 
 ================================================================================
+## DOCUMENT: Platform Overview
 ## URL: https://docs.extrascoop.app/introduction/overview
+## SUMMARY: An introduction to Extra Scoop, the institutional verification and media licensing network.
 ================================================================================
-
----
-title: "Platform Overview"
-description: "An introduction to Extra Scoop, the institutional verification and media licensing network."
----
 
 Extra Scoop is an institutional media network that bridges eyewitnesses on the ground with broadcast newsrooms. The platform combines hardware-backed capture, automated authenticity verification, and cryptographic licensing to establish an unbroken chain of custody for breaking news.
 
@@ -61,15 +66,11 @@ To protect the verification network against automated spoofing, synthetic evasio
 To get started, explore the [Platform Glossary](/introduction/glossary) or review the [Silicon Trust™ Architecture](/concepts/silicon-trust).
 
 
-
 ================================================================================
+## DOCUMENT: Platform Glossary
 ## URL: https://docs.extrascoop.app/introduction/glossary
+## SUMMARY: Canonical terms and concepts used across the Extra Scoop documentation.
 ================================================================================
-
----
-title: "Platform Glossary"
-description: "Canonical terms and concepts used across the Extra Scoop documentation."
----
 
 This glossary provides standard definitions for core architectural concepts, licensing terms, and verification systems across Extra Scoop.
 
@@ -89,18 +90,16 @@ This glossary provides standard definitions for core architectural concepts, lic
 | **C2PA Manifest** | A standardised digital provenance record injected directly into media containers to prove asset origin, capture parameters, and editorial integrity. |
 
 
-
-# Category: Core Concepts
+################################################################################
+# GROUP: CORE CONCEPTS
+################################################################################
 
 
 ================================================================================
+## DOCUMENT: Silicon Trust™ Architecture
 ## URL: https://docs.extrascoop.app/concepts/silicon-trust
+## SUMMARY: How Extra Scoop verifies media authenticity, screens for synthetic media, and protects eyewitness provenance.
 ================================================================================
-
----
-title: "Silicon Trust™ Architecture"
-description: "How Extra Scoop verifies media authenticity, screens for synthetic media, and protects eyewitness provenance."
----
 
 Silicon Trust™ is the core integrity architecture of Extra Scoop. It provides end-to-end verification for breaking news footage by combining hardware-backed capture, automated synthetic-media analysis, and persistent provenance watermarking.
 
@@ -196,15 +195,11 @@ Once purged, only the sealed version with embedded provenance is accessible for 
 | **Source Safety** | Permanent raw purge | Eliminates unauthorized distribution of unprotected raw media. |
 
 
-
 ================================================================================
+## DOCUMENT: Digital Deeds & Provenance
 ## URL: https://docs.extrascoop.app/concepts/digital-deeds
+## SUMMARY: How Digital Deeds establish legal ownership, licensing rights, and cryptographic custody.
 ================================================================================
-
----
-title: "Digital Deeds & Provenance"
-description: "How Digital Deeds establish legal ownership, licensing rights, and cryptographic custody."
----
 
 A Digital Deed is an immutable certificate of ownership and commercial licensing issued for every verified scoop on Extra Scoop. It establishes an unbroken, cryptographically verifiable chain of custody between the eyewitness who recorded the event and the newsroom purchasing broadcast rights.
 
@@ -253,15 +248,11 @@ Both eyewitnesses and newsrooms manage their deeds through the **Deed Vault**:
 For procedural guidance on buying and managing deeds, see the [Concord Dealroom Guide](/terminal/concord-dealroom).
 
 
-
 ================================================================================
+## DOCUMENT: Trust Scores & Verification
 ## URL: https://docs.extrascoop.app/concepts/trust-scores
+## SUMMARY: How Extra Scoop measures media credibility, creator reputation, and feed priority.
 ================================================================================
-
----
-title: "Trust Scores & Verification"
-description: "How Extra Scoop measures media credibility, creator reputation, and feed priority."
----
 
 The Trust Score is a dynamic credibility rating assigned to creators and individual media dispatches. It gives newsrooms an immediate measure of authenticity while ensuring high-integrity eyewitness reporting receives priority distribution on the wire.
 
@@ -309,15 +300,11 @@ Dispatches that clear all integrity checks display distinct verification indicat
 * **Restricted / Flagged:** Content failing synthetic-media evaluation; automatically suppressed from commercial licensing.
 
 
-
 ================================================================================
+## DOCUMENT: Smart Escrow & Settlement
 ## URL: https://docs.extrascoop.app/concepts/smart-escrow
+## SUMMARY: How automated escrow secures licensing transactions for both creators and newsrooms.
 ================================================================================
-
----
-title: "Smart Escrow & Settlement"
-description: "How automated escrow secures licensing transactions for both creators and newsrooms."
----
 
 Extra Scoop incorporates an automated Smart Escrow system to manage financial settlement between newsrooms and eyewitnesses. Escrow ensures that newsrooms receive verified broadcast-grade media with full legal provenance, while ensuring creators receive guaranteed payment the moment licensing terms are accepted.
 
@@ -368,18 +355,16 @@ To maintain institutional compliance and market integrity, all commercial bids w
    * Dispatches creator proceeds to Stripe Connect.
 
 
-
-# Category: Eyewitness Mobile App
+################################################################################
+# GROUP: EYEWITNESS MOBILE APP
+################################################################################
 
 
 ================================================================================
+## DOCUMENT: Eyewitness App Quickstart
 ## URL: https://docs.extrascoop.app/eyewitness/quickstart
+## SUMMARY: How to set up the Extra Scoop mobile app and begin reporting verified news.
 ================================================================================
-
----
-title: "Eyewitness App Quickstart"
-description: "How to set up the Extra Scoop mobile app and begin reporting verified news."
----
 
 The Extra Scoop mobile app enables you to record breaking news footage, certify its provenance, license it to global news organisations, and get paid directly.
 
@@ -432,15 +417,11 @@ You can update your persona selection and notification preferences at any time i
 Next, learn how to [Capture Verified Footage](/eyewitness/capturing-footage).
 
 
-
 ================================================================================
+## DOCUMENT: Capturing Verified Footage
 ## URL: https://docs.extrascoop.app/eyewitness/capturing-footage
+## SUMMARY: How to record, certify, and publish breaking media from the ground.
 ================================================================================
-
----
-title: "Capturing Verified Footage"
-description: "How to record, certify, and publish breaking media from the ground."
----
 
 Extra Scoop uses an in-app capture system that establishes an unbroken chain of custody from the moment your camera sensor records light.
 
@@ -494,15 +475,11 @@ When submitting content, you can control how your identity appears on the public
 To understand how newsrooms bid on your published footage, proceed to [Dealroom & Bidding](/eyewitness/dealroom-bidding).
 
 
-
 ================================================================================
+## DOCUMENT: The Dealroom & Bidding
 ## URL: https://docs.extrascoop.app/eyewitness/dealroom-bidding
+## SUMMARY: How to review incoming offers, negotiate terms, and license your scoops.
 ================================================================================
-
----
-title: "The Dealroom & Bidding"
-description: "How to review incoming offers, negotiate terms, and license your scoops."
----
 
 When a newsroom discovers your scoop on the wire, editors can place commercial bids to acquire broadcast rights. You manage and negotiate all incoming proposals within the **Dealroom**.
 
@@ -561,15 +538,11 @@ You have three options for every incoming offer before the countdown timer expir
 Next, learn how to manage your banking details and withdraw earnings in [Payouts & Stripe Connect](/eyewitness/payouts-stripe).
 
 
-
 ================================================================================
+## DOCUMENT: Payouts & Stripe Connect
 ## URL: https://docs.extrascoop.app/eyewitness/payouts-stripe
+## SUMMARY: How to connect your bank account, track earnings, and receive instant payouts.
 ================================================================================
-
----
-title: "Payouts & Stripe Connect"
-description: "How to connect your bank account, track earnings, and receive instant payouts."
----
 
 Extra Scoop integrates with Stripe Connect to deliver secure, automated payouts directly to your local bank account whenever a licensing agreement is completed.
 
@@ -615,15 +588,11 @@ To protect your earnings against unauthorized withdrawals or account compromise:
 * **Account Disconnection:** You can disconnect or rotate your linked payout account at any time through the **Payout Settings** menu.
 
 
-
 ================================================================================
+## DOCUMENT: Ephemeral E2EE Messenger
 ## URL: https://docs.extrascoop.app/eyewitness/ephemeral-messenger
+## SUMMARY: How Extra Scoop safeguards source confidentiality and encrypted communications.
 ================================================================================
-
----
-title: "Ephemeral E2EE Messenger"
-description: "How Extra Scoop safeguards source confidentiality and encrypted communications."
----
 
 The Ephemeral Messenger is a zero-knowledge, end-to-end encrypted (E2EE) chat environment designed for secure negotiations between eyewitnesses on the ground and newsroom editors.
 
@@ -662,18 +631,16 @@ The messaging architecture enforces strict operational confidentiality controls:
 4. Conduct price negotiation, clarify contextual details, or share additional perspective securely.
 
 
-
-# Category: Newsroom Terminal
+################################################################################
+# GROUP: NEWSROOM TERMINAL
+################################################################################
 
 
 ================================================================================
+## DOCUMENT: Newsroom Terminal Overview
 ## URL: https://docs.extrascoop.app/terminal/overview
+## SUMMARY: An institutional desktop command centre for newsrooms, wire editors, and investigative desks.
 ================================================================================
-
----
-title: "Newsroom Terminal Overview"
-description: "An institutional desktop command centre for newsrooms, wire editors, and investigative desks."
----
 
 The Newsroom Terminal is a desktop intelligence platform engineered for broadcast newsrooms, wire services, and investigative desks. It provides real-time monitoring of verified breaking dispatches, instant commercial licensing, and direct broadcast export.
 
@@ -711,15 +678,11 @@ Access to the Newsroom Terminal is restricted to verified media organisations, n
 Next, learn how to configure your multi-column streams and use AI search in [Workspace Columns & AI Search](/terminal/workspace-columns).
 
 
-
 ================================================================================
+## DOCUMENT: Workspace Columns & AI Search
 ## URL: https://docs.extrascoop.app/terminal/workspace-columns
+## SUMMARY: How to organise real-time monitoring columns and leverage the AI-powered OmniCommand search engine.
 ================================================================================
-
----
-title: "Workspace Columns & AI Search"
-description: "How to organise real-time monitoring columns and leverage the AI-powered OmniCommand search engine."
----
 
 The Newsroom Terminal workspace allows you to assemble tailored monitoring desks by configuring multi-column intelligence feeds and executing rapid AI-powered natural language queries or structured Boolean searches.
 
@@ -806,15 +769,11 @@ To ensure editors never miss breaking developments while multitasking across scr
 * **Custom Sensitivity:** Configure audio frequency, alert volume, or mute specific categories in **Terminal Settings > Audio**.
 
 
-
 ================================================================================
+## DOCUMENT: Concord Dealroom & Licensing
 ## URL: https://docs.extrascoop.app/terminal/concord-dealroom
+## SUMMARY: How to negotiate, acquire, and manage exclusive commercial media licences.
 ================================================================================
-
----
-title: "Concord Dealroom & Licensing"
-description: "How to negotiate, acquire, and manage exclusive commercial media licences."
----
 
 The Concord Dealroom is the institutional transaction desk within the Newsroom Terminal. It enables newsrooms to inspect verification reports, make commercial offers, negotiate terms with creators, and secure exclusive broadcast rights.
 
@@ -870,15 +829,11 @@ The instant an eyewitness accepts your offer:
 3. Your organisation receives immediate commercial indemnity and the asset is permanently moved to your [Deed Vault](/terminal/deed-vault).
 
 
-
 ================================================================================
+## DOCUMENT: The Deed Vault
 ## URL: https://docs.extrascoop.app/terminal/deed-vault
+## SUMMARY: How to manage acquired digital deeds, verify on-chain anchors, and access licensed media.
 ================================================================================
-
----
-title: "The Deed Vault"
-description: "How to manage acquired digital deeds, verify on-chain anchors, and access licensed media."
----
 
 The Deed Vault is your agency's permanent legal and compliance archive. It stores all acquired Digital Deeds, C2PA provenance receipts, and high-resolution master media packages in a single auditable interface.
 
@@ -921,15 +876,11 @@ Comparing this hash against the on-chain `DeedAnchored` event confirms that the 
 To export your licensed assets into newsroom automation systems, see [Wire Format Exporter](/terminal/wire-exporter).
 
 
-
 ================================================================================
+## DOCUMENT: Wire Format Exporter
 ## URL: https://docs.extrascoop.app/terminal/wire-exporter
+## SUMMARY: How to export verified dispatches into IPTC NewsML-G2 XML and newsroom CMS webhooks.
 ================================================================================
-
----
-title: "Wire Format Exporter"
-description: "How to export verified dispatches into IPTC NewsML-G2 XML and newsroom CMS webhooks."
----
 
 The Wire Format Exporter transforms verified Extra Scoop dispatches into standardized newsroom formats, enabling rapid ingestion into broadcast automation, wire tickers, and digital content management systems.
 
@@ -1017,18 +968,16 @@ To prevent accidental broadcast of unlicensed material, the exporter dynamically
 | **Unlicensed Preview** | Replaced with `[LOCKED - DEED PURCHASE REQUIRED]`. | Disabled until licence acquisition settles in Concord. |
 
 
-
-# Category: Developer Hub
+################################################################################
+# GROUP: DEVELOPER HUB
+################################################################################
 
 
 ================================================================================
+## DOCUMENT: API Authentication
 ## URL: https://docs.extrascoop.app/developer/api-authentication
+## SUMMARY: How to authenticate programmatic requests to the Extra Scoop Edge API.
 ================================================================================
-
----
-title: "API Authentication"
-description: "How to authenticate programmatic requests to the Extra Scoop Edge API."
----
 
 The Extra Scoop Edge API allows media organisations to integrate wire feeds, automate bid management, and ingest licensed media into proprietary newsroom infrastructure.
 
@@ -1107,15 +1056,11 @@ print(response.json())
 * **Service Tokens:** Static programmatic keys; can be revoked or rotated immediately from your Developer Dashboard if compromised.
 
 
-
 ================================================================================
+## DOCUMENT: Model Context Protocol (MCP)
 ## URL: https://docs.extrascoop.app/developer/mcp-server
+## SUMMARY: How to connect Claude Desktop and AI newsroom copilots to the Extra Scoop live intelligence wire.
 ================================================================================
-
----
-title: "Model Context Protocol (MCP)"
-description: "How to connect Claude Desktop and AI newsroom copilots to the Extra Scoop live intelligence wire."
----
 
 The Extra Scoop Model Context Protocol (MCP) server enables newsrooms to integrate live breaking intelligence, automated scoop discovery, and dealroom bidding directly into AI copilots such as Claude Desktop, Cursor, and enterprise AI agents.
 
@@ -1202,15 +1147,11 @@ Once configured, you can query Claude directly:
 Claude will autonomously invoke `search_scoops`, inspect the C2PA verification signals, and provide an editorial intelligence briefing.
 
 
-
 ================================================================================
+## DOCUMENT: Webhooks Integration
 ## URL: https://docs.extrascoop.app/developer/webhooks
+## SUMMARY: How to subscribe to real-time licensing, verification, and settlement events.
 ================================================================================
-
----
-title: "Webhooks Integration"
-description: "How to subscribe to real-time licensing, verification, and settlement events."
----
 
 Extra Scoop uses webhooks to notify external newsroom systems when asynchronous events occur on the platform, such as an eyewitness accepting an offer or a digital deed anchoring on-chain.
 
@@ -1310,15 +1251,11 @@ def receive_webhook():
 </CodeGroup>
 
 
-
 ================================================================================
+## DOCUMENT: Errors & Rate Limits
 ## URL: https://docs.extrascoop.app/developer/errors-and-limits
+## SUMMARY: Standard HTTP error codes, rate limits, and error handling guidelines for developers.
 ================================================================================
-
----
-title: "Errors & Rate Limits"
-description: "Standard HTTP error codes, rate limits, and error handling guidelines for developers."
----
 
 The Extra Scoop API returns standard HTTP status codes and structured JSON error responses to guide client integration and automated exception handling.
 
@@ -1377,5 +1314,3 @@ X-RateLimit-Reset: 1725055200
 ```
 
 If you receive a `429 Too Many Requests` response, read the `Retry-After` header and implement exponential backoff before repeating the request.
-
-
