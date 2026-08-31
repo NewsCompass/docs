@@ -2,7 +2,11 @@
 
 > Extra Scoop is an institutional media network bridging eyewitnesses on the ground with broadcast newsrooms through hardware-backed capture, automated authenticity verification, and cryptographic licensing.
 
-Full documentation archive: https://docs.extrascoop.app/llms-full.txt
+* Website: https://extrascoop.app
+* Documentation: https://docs.extrascoop.app
+* Full Unabridged Documentation: https://docs.extrascoop.app/llms-full.txt
+
+---
 
 ## Introduction
 
@@ -22,13 +26,13 @@ Full documentation archive: https://docs.extrascoop.app/llms-full.txt
 * [Capturing Verified Footage](https://docs.extrascoop.app/eyewitness/capturing-footage): In-app camera recording, sensor metadata extraction, geographic tagging, and LocalForage offline queueing.
 * [The Dealroom & Bidding](https://docs.extrascoop.app/eyewitness/dealroom-bidding): Receiving incoming newsroom bids, evaluating exclusive versus syndication licences, submitting counter-offers, and accepting terms.
 * [Payouts & Stripe Connect](https://docs.extrascoop.app/eyewitness/payouts-stripe): Connecting bank accounts, tracking available balances and lifetime earnings, and executing automated transfers via Stripe Connect.
-* [Ephemeral E2EE Messenger](https://docs.extrascoop.app/eyewitness/ephemeral-messenger): Source confidentiality channel engineered with ML-KEM 768 (Kyber) post-quantum key encapsulation, RSA-OAEP 2048, AES-GCM 256, Apple Secure Enclave P-256 signatures, RAM-only session storage, and deterministic memory noise wiping.
+* [Ephemeral E2EE Messenger](https://docs.extrascoop.app/eyewitness/ephemeral-messenger): Source confidentiality channel engineered with ML-KEM 768 (Kyber) post-quantum key encapsulation, RSA-OAEP 2048, AES-GCM 256, Apple Secure Enclave P-256 signatures, a strict 15-minute RAM-only session lifetime, and deterministic memory noise wiping.
 
 ## Newsroom Terminal
 
 * [Terminal Overview](https://docs.extrascoop.app/terminal/overview): High-speed desktop command centre featuring Workspace Columns, Grid Feed, and Deed Vault modes.
 * [Workspace Columns & AI Search](https://docs.extrascoop.app/terminal/workspace-columns): Multi-stream feed organisation, OmniCommand AI search with multi-tier latency caching (Tier-0 in-memory edge cache, Tier-1 semantic vector cache, AI intent compiler, and briefing synthesis), Boolean query syntax (`AND`, `OR`, `NOT`, `trust:>N`, `#hashtag`), and sonar acoustic radar alerts.
-* [Concord Dealroom & Licensing](https://docs.extrascoop.app/terminal/concord-dealroom): Evaluating verification reports, placing commercial bids, negotiating counter-proposals, and executing smart escrow locks.
+* [Concord Dealroom & Licensing](https://docs.extrascoop.app/terminal/concord-dealroom): Evaluating verification reports, placing commercial bids (£5.00 min to £1M max with 3m/5m/10m/30m/1h expiry presets), negotiating counter-proposals, and executing smart escrow locks.
 * [The Deed Vault](https://docs.extrascoop.app/terminal/deed-vault): Permanent legal and compliance archive for inspecting cryptographic anchors, verifying Base layer-2 receipts, and downloading high-resolution master files.
 * [Wire Format Exporter](https://docs.extrascoop.app/terminal/wire-exporter): 1-click broadcast package export formatted for IPTC NewsML-G2 XML (compatible with BBC ENPS, AP Newsroom, Reuters Connect) and newsroom CMS JSON webhooks.
 
@@ -38,6 +42,27 @@ Full documentation archive: https://docs.extrascoop.app/llms-full.txt
 * [Model Context Protocol (MCP)](https://docs.extrascoop.app/developer/mcp-server): Connecting Claude Desktop, Cursor, and autonomous AI newsroom agents to the live intelligence wire via MCP tools (`search_scoops`, `get_scoop_details`, `synthesize_briefing`, `make_offer`).
 * [Webhooks Integration](https://docs.extrascoop.app/developer/webhooks): Real-time event subscriptions (`escrow.locked`, `deed.anchored`, `media.ready`, `scoop.verified`) with timing-safe HMAC-SHA256 signature verification.
 * [Errors & Rate Limits](https://docs.extrascoop.app/developer/errors-and-limits): Standard HTTP response status codes, error payloads, and API tier rate limits.
+
+---
+
+## Canonical Platform Glossary
+
+| Term | Definition |
+| :--- | :--- |
+| **Silicon Trust™** | A layered provenance framework combining synthetic-media screening, hardware attestation, and cryptographically signed manifests to guarantee the integrity of breaking news media. |
+| **Digital Deed** | An immutable ownership certificate anchored to the Base layer-2 blockchain and decentralised storage, establishing legal title, chain of custody, and commercial licensing terms. |
+| **Trust Score** | A dynamic reputation rating computed from multi-factor verification signals, hardware attestation, and community consensus. |
+| **Smart Escrow** | An automated settlement mechanism locking enterprise bids (£5.00 to £1,000,000.00) in secure custody and executing instant payout upon licence acceptance. |
+| **Concord Dealroom** | An institutional negotiation interface enabling verified newsrooms to submit commercial bids, propose custom terms, and acquire exclusive media licences directly from eyewitnesses. |
+| **Deed Vault** | A cryptographically verifiable repository where creators and newsrooms inspect, track, and manage all active, pending, and settled digital deeds and licences. |
+| **Ephemeral Messenger** | An end-to-end encrypted communication channel engineered with post-quantum key encapsulation (ML-KEM 768), a 15-minute RAM-only lifetime, and deterministic memory purging. |
+| **Newsroom Terminal** | A real-time desktop intelligence desk featuring configurable multi-stream columns, AI search, acoustic radar alerts, and automated wire export. |
+| **Wire Exporter** | A formatting engine converting verified media packages into IPTC NewsML-G2 XML and webhook payloads compatible with major broadcast CMS systems. |
+| **Provenance Invariance** | A security guarantee ensuring that unwatermarked raw source assets are permanently purged from public access once protected and sealed by the provenance pipeline. |
+| **Blind ID** | A cryptographically masked session identifier that shields contributor identity while maintaining verifiable reputational provenance. |
+| **C2PA Manifest** | A standardised digital provenance record injected directly into media containers to prove asset origin, capture parameters, and editorial integrity. |
+
+---
 
 ## Complete Pages Map
 
