@@ -1,6 +1,6 @@
 # Extra Scoop Documentation
 
-> Technical and product documentation for Extra Scoop, an institutional media network connecting eyewitnesses with newsrooms through hardware-backed capture, automated authenticity verification, and cryptographic licensing.
+> Technical and product documentation for Extra Scoop, an institutional media network connecting eyewitnesses with newsrooms through hardware-backed capture, automated authenticity verification, PostGIS spatial indexing, and cryptographic licensing.
 
 * Platform: https://extrascoop.app
 * Newsroom Terminal: https://terminal.extrascoop.app
@@ -17,7 +17,7 @@
 
 - [Silicon Trust™ Architecture](https://docs.extrascoop.app/concepts/silicon-trust): Multi-stage verification pipeline incorporating synthetic media and deepfake detection (still image frequency analysis and video temporal/biological consistency), automated dealroom quarantine, neural watermarking with forward error correction, C2PA manifest injection, and the Provenance Invariance raw file purge guarantee.
 - [Digital Deeds & Provenance](https://docs.extrascoop.app/concepts/digital-deeds): Standardised legal ownership instruments anchored to the Base layer-2 blockchain and decentralised IPFS storage, establishing legal title, chain of custody, and commercial licensing terms.
-- [Trust Scores & Verification](https://docs.extrascoop.app/concepts/trust-scores): Dynamic credibility ratings computed from hardware device attestation (Apple Secure Enclave), spatial/temporal metadata consistency, synthetic media analysis, and creator track records.
+- [Trust Scores & Verification](https://docs.extrascoop.app/concepts/trust-scores): Quantitative credibility ratings (0-100 scale), PostGIS spatial indexing, hardware device attestation, and creator track records.
 - [Smart Escrow & Settlement](https://docs.extrascoop.app/concepts/smart-escrow): Automated commercial settlement engine locking newsroom bidding funds (£5.00 minimum to £1,000,000.00 maximum) and executing instant payout to creators upon mutually agreed terms.
 
 ## Eyewitness Mobile App
@@ -31,7 +31,7 @@
 ## Newsroom Terminal
 
 - [Newsroom Terminal Overview](https://docs.extrascoop.app/terminal/overview): Desktop command centre for broadcast wire desks and investigative editors featuring Workspace Columns, Grid Feed, and Deed Vault modes.
-- [Workspace Columns & AI Search](https://docs.extrascoop.app/terminal/workspace-columns): Multi-stream beat monitoring, OmniCommand search with multi-tier latency caching (Tier-0 edge in-memory cache <1ms, Tier-1 semantic vector cache, and AI intent compilation), Boolean query operators (AND, OR, NOT, trust:>N, #hashtag), and acoustic alert triggers.
+- [Workspace Columns & AI Search](https://docs.extrascoop.app/terminal/workspace-columns): Multi-stream beat monitoring, OmniCommand search with multi-tier latency caching (Tier-0 edge in-memory cache <1ms, Tier-1 semantic vector cache, and AI intent compilation), PostGIS spatial search, Boolean query operators (AND, OR, NOT, trust:>N, #hashtag), and acoustic alert triggers.
 - [Concord Dealroom & Licensing](https://docs.extrascoop.app/terminal/concord-dealroom): Evaluating verification reports, placing commercial bids (£5.00 min to £1M max with 3m/5m/10m/30m/1h expiry presets), negotiating terms, and executing atomic escrow locks.
 - [The Deed Vault](https://docs.extrascoop.app/terminal/deed-vault): Permanent legal and compliance archive for inspecting cryptographic Merkle anchors, verifying Base layer-2 receipts, and downloading uncompressed master broadcast files.
 - [Wire Format Exporter](https://docs.extrascoop.app/terminal/wire-exporter): Broadcast package exporter generating IPTC NewsML-G2 XML (compatible with BBC ENPS, AP Newsroom, Reuters Connect) and newsroom CMS JSON webhooks with commercial licensing enforcement.
@@ -49,7 +49,7 @@
 | :--- | :--- |
 | **Silicon Trust™** | A layered provenance framework combining synthetic-media screening, hardware attestation, and cryptographically signed manifests to guarantee the integrity of breaking news media. |
 | **Digital Deed** | An immutable ownership certificate anchored to the Base layer-2 blockchain and decentralised storage, establishing legal title, chain of custody, and commercial licensing terms. |
-| **Trust Score** | A dynamic reputation rating computed from multi-factor verification signals, hardware attestation, and community consensus. |
+| **Trust Score** | A dynamic reputation rating computed from multi-factor verification signals, hardware attestation, and PostGIS spatial clustering consensus. |
 | **Smart Escrow** | An automated settlement mechanism locking enterprise bids (£5.00 to £1,000,000.00) in secure custody and executing instant payout upon licence acceptance. |
 | **Concord Dealroom** | An institutional negotiation interface enabling verified newsrooms to submit commercial bids, propose custom terms, and acquire exclusive media licences directly from eyewitnesses. |
 | **Deed Vault** | A cryptographically verifiable repository where creators and newsrooms inspect, track, and manage all active, pending, and settled digital deeds and licences. |
