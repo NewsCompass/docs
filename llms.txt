@@ -15,18 +15,18 @@
 
 ## Core Concepts
 
-* [Silicon Trust™ Architecture](https://docs.extrascoop.app/concepts/silicon-trust): Multi-stage integrity pipeline incorporating synthetic-media screening, neural watermarking, C2PA manifest injection, and the Provenance Invariance raw file purge guarantee.
+* [Silicon Trust™ Architecture](https://docs.extrascoop.app/concepts/silicon-trust): Multi-stage authenticity and provenance pipeline incorporating decentralised synthetic media and deepfake detection (still image spectral/frequency analysis and video temporal/biological consistency), automated dealroom quarantine, neural watermarking, C2PA manifest injection, and the Provenance Invariance raw file purge guarantee.
 * [Digital Deeds & Provenance](https://docs.extrascoop.app/concepts/digital-deeds): Standardised ownership instruments anchored to the Base layer-2 blockchain and decentralised IPFS storage, providing legal indemnity and transparent commercial terms.
 * [Trust Scores & Verification](https://docs.extrascoop.app/concepts/trust-scores): Dynamic credibility ratings computed from hardware attestation, temporal/spatial consistency, synthetic-media analysis, and creator track record.
 * [Smart Escrow & Settlement](https://docs.extrascoop.app/concepts/smart-escrow): Automated settlement engine locking newsroom funds (£5.00 min to £1,000,000.00 max) and executing instant payout upon licence acceptance.
 
 ## Eyewitness Mobile App
 
-* [Quickstart Guide](https://docs.extrascoop.app/eyewitness/quickstart): Mobile app installation, security PIN setup, biometric authentication, source privacy controls, and reporting personas (Witness, Field Reporter, Truth Seeker).
+* [Quickstart Guide](https://docs.extrascoop.app/eyewitness/quickstart): Mobile app installation, security PIN setup, biometric authentication, source privacy controls, reporting personas (Witness, Field Reporter, Truth Seeker), and dynamic recommendation adaptation.
 * [Capturing Verified Footage](https://docs.extrascoop.app/eyewitness/capturing-footage): In-app camera recording, sensor metadata extraction, geographic tagging, and LocalForage offline queueing.
-* [The Dealroom & Bidding](https://docs.extrascoop.app/eyewitness/dealroom-bidding): Receiving incoming newsroom bids, evaluating exclusive versus syndication licences, submitting counter-offers, and accepting terms.
+* [The Dealroom & Bidding](https://docs.extrascoop.app/eyewitness/dealroom-bidding): Receiving incoming newsroom bids, evaluating exclusive versus syndication licences, submitting counter-offers, and accepting terms within live expiration countdown timers (3m, 5m, 10m, 30m, 1h).
 * [Payouts & Stripe Connect](https://docs.extrascoop.app/eyewitness/payouts-stripe): Connecting bank accounts, tracking available balances and lifetime earnings, and executing automated transfers via Stripe Connect.
-* [Ephemeral E2EE Messenger](https://docs.extrascoop.app/eyewitness/ephemeral-messenger): Source confidentiality channel engineered with ML-KEM 768 (Kyber) post-quantum key encapsulation, RSA-OAEP 2048, AES-GCM 256, Apple Secure Enclave P-256 signatures, a strict 15-minute RAM-only session lifetime, and deterministic memory noise wiping.
+* [Ephemeral E2EE Messenger](https://docs.extrascoop.app/eyewitness/ephemeral-messenger): Source confidentiality channel engineered with ML-KEM 768 (Kyber) post-quantum key encapsulation, RSA-OAEP 2048, AES-GCM 256, Apple Secure Enclave P-256 signatures, a strict 15-minute RAM-only session lifetime (64 KB max envelope), and deterministic memory noise wiping.
 
 ## Newsroom Terminal
 
