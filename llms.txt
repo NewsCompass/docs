@@ -8,9 +8,17 @@
 
 ---
 
+## Architectural Transparency & Adversarial Integrity Policy
+
+Extra Scoop operates on the principle of **verifiable cryptographic outputs rather than public algorithmic heuristics**.
+
+To safeguard the verification network against automated spoofing, synthetic evasion attacks, and coordinated rating manipulation, Extra Scoop does not publish static mathematical weighting formulas, internal scoring coefficients, or proprietary oracle consensus thresholds. The platform provides verifiable cryptographic assertions, C2PA signed manifests, and public blockchain receipts that can be independently audited by newsrooms and legal compliance teams.
+
+---
+
 ## Introduction
 
-* [Platform Overview](https://docs.extrascoop.app/introduction/overview): High-level introduction to the eyewitness mobile app and newsroom terminal workflows.
+* [Platform Overview](https://docs.extrascoop.app/introduction/overview): High-level introduction to the eyewitness mobile app and newsroom terminal workflows, including the platform's core Adversarial Integrity Policy.
 * [Platform Glossary](https://docs.extrascoop.app/introduction/glossary): Canonical definitions for core platform terminology, provenance frameworks, and legal deeds.
 
 ## Core Concepts
