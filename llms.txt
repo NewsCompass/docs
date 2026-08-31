@@ -4,7 +4,7 @@
 
 * Root Website: https://extrascoop.app
 * Documentation Hub: https://docs.extrascoop.app
-* Full Unabridged Documentation: https://docs.extrascoop.app/llms-full.txt?v=20260831
+* Full Unabridged Documentation: https://docs.extrascoop.app/llms-full.txt?v=latest
 
 ---
 
