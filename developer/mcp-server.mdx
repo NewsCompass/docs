@@ -62,19 +62,19 @@ Retrieves complete verification intelligence, metadata, and licensing status for
   * `scoop_id` *(string)*: Unique identifier of the target scoop.
 
 ### 3. `synthesize_briefing`
-Generates a concise 2–3 sentence executive newsroom briefing synthesizing key developments across retrieved breaking items.
+Generates a concise 2–3 sentence executive newsroom briefing synthesising key developments across retrieved breaking items.
 
 * **Parameters:**
   * `prompt` *(string)*: Editorial focus or question.
-  * `scoop_ids` *(array of strings)*: Target scoops to summarize.
+  * `scoop_ids` *(array of strings)*: Target scoops to summarise.
 
 ### 4. `make_offer` *(Enterprise Only)*
-Enables authorized AI agents to programmatically lock escrow funds and submit commercial licence offers.
+Enables authorised AI agents to programmatically lock escrow funds and submit commercial licence offers.
 
 * **Parameters:**
   * `scoop_id` *(string)*: The scoop to acquire.
   * `amount` *(number)*: Offer price in GBP (£5.00 to £1,000,000.00).
-  * `expiry_minutes` *(number)*: Expiration countdown window (`3`, `5`, `10`, `30`, or `60`).
+  * `expiry_minutes` *(number)*: Expiry countdown window (`3`, `5`, `10`, `30`, or `60`).
   * `licence_type` *(string)*: `exclusive` or `syndication`.
 
 ---
@@ -83,6 +83,6 @@ Enables authorized AI agents to programmatically lock escrow funds and submit co
 
 Once configured, you can query Claude directly:
 
-> *"Check Extra Scoop for verified breaking footage of the transport protest in central London over the last 24 hours. Summarize the key angles and let me know if exclusive broadcast rights are available."*
+> *"Check Extra Scoop for verified breaking footage of the transport protest in central London over the last 24 hours. Summarise the key angles and let me know if exclusive broadcast rights are available."*
 
 Claude will autonomously invoke `search_scoops`, inspect the C2PA verification signals, and provide an editorial intelligence briefing.

@@ -1,6 +1,6 @@
 ---
 title: "Workspace Columns & AI Search"
-description: "How to organise real-time monitoring columns and leverage the AI-powered OmniCommand search engine."
+description: "How to organise real-time monitoring columns and use the AI-powered OmniCommand search engine."
 ---
 
 The Newsroom Terminal workspace allows you to assemble tailored monitoring desks by configuring multi-column intelligence feeds and executing rapid AI-powered natural language queries or structured Boolean searches.
@@ -8,7 +8,7 @@ The Newsroom Terminal workspace allows you to assemble tailored monitoring desks
 ```mermaid
 graph TD
     A[Editor Query / Command] --> B[OmniCommand AI Gateway]
-    B -->|Tier-0| C[Normalized Prompt Cache <1ms]
+    B -->|Tier-0| C[Normalised Prompt Cache <1ms]
     B -->|Tier-1| D[Semantic Vector Cache]
     B -->|Inference| E[AI Natural Language Intent Compiler]
     C --> F[Structured Newsroom Query]
@@ -39,7 +39,7 @@ You can configure multiple independent columns side-by-side to monitor different
 
 ## OmniCommand AI Search Engine
 
-The **OmniCommand Bar** at the top of the terminal acts as an AI-powered intelligence compiler that translates complex editorial questions into high-speed database queries and synthesized briefings.
+The **OmniCommand Bar** at the top of the terminal acts as an AI-powered intelligence compiler that translates complex editorial questions into high-speed database queries and synthesised briefings.
 
 ### How the AI Reduces Latency
 
@@ -55,14 +55,14 @@ graph LR
     LLM --> Exec
 ```
 
-1. **Tier-0 Edge In-Memory Cache (Sub-1ms):** Frequently requested newsroom queries and normalized prompt patterns are resolved instantly at the edge.
+1. **Tier-0 Edge In-Memory Cache (Sub-1ms):** Frequently requested newsroom queries and normalised prompt patterns are resolved instantly at the edge.
 2. **Tier-1 Semantic Vector Cache:** Converts incoming queries into vector embeddings and matches semantically identical requests using cosine distance indexing without invoking LLM inference repeatedly.
-3. **AI Natural Language Intent Compiler:** For novel prompts, a specialized language model extracts keywords, category beats, credibility requirements, media format preferences (video vs still photography), geographic bounds, and timeframes (e.g. 24h, 7d, 30d).
+3. **AI Natural Language Intent Compiler:** For novel prompts, a specialised language model extracts keywords, category beats, credibility requirements, media format preferences (video vs still photography), geographic bounds, and timeframes (e.g. 24h, 7d, 30d).
 4. **Deterministic Client Fallback:** If offline or experiencing connection drops, a local heuristic compiler processes keywords instantly without interruption.
 
 ### AI Newsroom Briefing Synthesis
 
-When you run a search, the OmniCommand engine can also generate an automated **AI Newsroom Briefing**—a concise 2–3 sentence factual summary synthesizing key breaking developments across all retrieved dispatches to accelerate editorial decision-making.
+When you run a search, the OmniCommand engine can also generate an automated **AI Newsroom Briefing**. This is a concise 2–3 sentence factual summary synthesising key breaking developments across all retrieved dispatches to accelerate editorial decision-making.
 
 ---
 
@@ -85,4 +85,4 @@ In addition to conversational AI prompts, editors can execute precise Boolean qu
 To ensure editors never miss breaking developments while multitasking across screens, the terminal includes audio alerts:
 
 * **Real-Time Chimes:** Emits a subtle acoustic tone whenever a newly published dispatch matching your column criteria hits the wire.
-* **Alert Customization:** Configure audio tone, alert volume, or mute specific categories in **Terminal Settings > Audio**.
+* **Alert Customisation:** Configure audio tone, alert volume, or mute specific categories in **Terminal Settings > Audio**.
