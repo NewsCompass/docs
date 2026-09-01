@@ -1,0 +1,64 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Extra Scoop",
+  "colors": {
+    "primary": "#d81159",
+    "light": "#d81159",
+    "dark": "#d81159"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Introduction",
+        "pages": [
+          "introduction/overview",
+          "introduction/glossary"
+        ]
+      },
+      {
+        "group": "Verification Architecture",
+        "pages": [
+          "concepts/silicon-trust",
+          "concepts/digital-deeds",
+          "concepts/trust-scores",
+          "concepts/smart-escrow"
+        ]
+      },
+      {
+        "group": "Eyewitness Mobile App",
+        "pages": [
+          "eyewitness/quickstart",
+          "eyewitness/capturing-footage",
+          "eyewitness/dealroom-bidding",
+          "eyewitness/payouts-stripe",
+          "eyewitness/ephemeral-messenger"
+        ]
+      },
+      {
+        "group": "Newsroom Terminal",
+        "pages": [
+          "terminal/overview",
+          "terminal/workspace-columns",
+          "terminal/concord-dealroom",
+          "terminal/deed-vault",
+          "terminal/wire-exporter"
+        ]
+      },
+      {
+        "group": "Developer Hub",
+        "pages": [
+          "developer/api-authentication",
+          "developer/mcp-server",
+          "developer/webhooks",
+          "developer/errors-and-limits"
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  }
+}

@@ -29,7 +29,7 @@ The messaging architecture enforces strict operational confidentiality controls:
 
 * **Zero-Persistence Relay:** Messages are routed through isolated encrypted relays. The server retains no plaintext copies, decryption keys, or unencrypted metadata.
 * **15-Minute RAM-Only Session Lifetime:** Active chat threads exist exclusively in volatile device memory with a strict **15-minute lifetime**. Messages are never written to permanent disk storage or database records.
-* **Deterministic Noise Wipe:** Upon reaching the 15-minute session limit, or the moment you sign out, the application overwrites all cryptographic memory buffers with cryptographically secure random noise, rendering unauthorized memory extraction impossible.
+* **Deterministic Noise Wipe:** Upon reaching the 15-minute session limit, or the moment you sign out, the application overwrites all cryptographic memory buffers with cryptographically secure random noise, rendering unauthorised memory extraction impossible.
 * **Safety Numbers & Fingerprints:** Both parties can visually compare a 32-character hexadecimal safety number to verify that no intermediary has intercepted or modified the communication channel.
 
 ## Initiating a Secure Session
