@@ -33,12 +33,12 @@ graph LR
     Type -->|Still Photography| Img[Still Image Pipeline]
     Type -->|Continuous Video| Vid[Temporal Video Pipeline]
     
-    Img --> Freq[Frequency Domain & Diffusion Artifact Analysis]
+    Img --> Freq[Frequency Domain & Diffusion Artefact Analysis]
     Img --> Blend[Pixel Edge & Generative Blending Inspection]
     
     Vid --> Temp[Frame-to-Frame Temporal Coherence]
     Vid --> Face[Facial Motion & Biological Consistency]
-    Vid --> Audio[Audio-Visual Acoustic Synchronization]
+    Vid --> Audio[Audio-Visual Acoustic Synchronisation]
     
     Freq --> Score[Consensus Authenticity Rating]
     Blend --> Score
@@ -77,7 +77,7 @@ Media that clears the synthetic detection oracle passes into the automated seali
 
 ## 3. Provenance Invariance (Raw File Purge)
 
-To guarantee that unwatermarked source material cannot leak or be scraped without authorization, the platform enforces **Provenance Invariance**:
+To guarantee that unwatermarked source material cannot leak or be scraped without authorisation, the platform enforces **Provenance Invariance**:
 
 1. The sealing service verifies that the protected, watermarked asset exists and is intact.
 2. The protected asset replaces the raw asset on the distribution wire.
@@ -94,4 +94,4 @@ Once purged, only the sealed version with embedded provenance is accessible for 
 | **Authenticity** | Multi-factor oracle screening | Flags AI-generated or manipulated footage before licensing. |
 | **Tamper Resistance** | Error-corrected watermarking | Preserves attribution through video re-compression and cropping. |
 | **Chain of Custody** | C2PA signed metadata | Verifies hardware origin and capture timestamp for broadcast legal teams. |
-| **Source Safety** | Permanent raw purge | Eliminates unauthorized distribution of unprotected raw media. |
+| **Source Safety** | Permanent raw purge | Eliminates unauthorised distribution of unprotected raw media. |

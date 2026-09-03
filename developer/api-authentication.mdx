@@ -10,7 +10,7 @@ sequenceDiagram
     participant Client as Newsroom Client
     participant API as Extra Scoop Edge API
     Client->>API: HTTP Request + Bearer JWT
-    API->>API: Validate Token & Organization Scopes
+    API->>API: Validate Token & Organisation Scopes
     API-->>Client: 200 OK + JSON Response
 ```
 
